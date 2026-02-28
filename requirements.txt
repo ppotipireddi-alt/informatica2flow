@@ -1,0 +1,15 @@
+setuptools
+lxml
+logging
+requests
+numpy
+python-dotenv
+psycopg2-binary
+sentence_transformers
+langchain
+langchain-openai
+langchain-community
+langchain-core
+langgraph
+
+

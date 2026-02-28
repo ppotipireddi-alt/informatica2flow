@@ -1,0 +1,274 @@
+{
+  "mapping_name": "M_POL_WKD_FILE_COSTCENTER",
+  "complexity": "SIMPLE",
+  "overall_confidence": 0.7458064516129033,
+  "spark_report": {
+    "has_spark": false,
+    "unsupported_count": 0,
+    "flags": [],
+    "summary": "\u2705 No Spark dependencies detected. Safe to migrate to NiFi."
+  },
+  "expression_translations": [
+    {
+      "transformation": "EXP_COST_POOL_BA",
+      "port": "MEMBER_ID",
+      "original": "MEMBER_ID",
+      "translated": "SQL: MEMBER_ID",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_COST_POOL_BA",
+      "port": "SHORT_DESCR",
+      "original": "SHORT_DESCR",
+      "translated": "SQL: SHORT_DESCR",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_COST_POOL_BA",
+      "port": "LONG_DESCR",
+      "original": "LONG_DESCR",
+      "translated": "LONG_DESCR",
+      "confidence": 0.3,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_COST_POOL_BA",
+      "port": "MEMBER_CLASS",
+      "original": "MEMBER_CLASS",
+      "translated": "SQL: MEMBER_CLASS",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_COST_POOL_BA",
+      "port": "Valid_From_Date_string",
+      "original": "TO_CHAR(VALID_FROM_DATE, 'YYYY-MM-DD')",
+      "translated": "CAST(VALID_FROM_DATE, 'YYYY-MM-DD' AS VARCHAR)",
+      "confidence": 0.88,
+      "method": "regex"
+    },
+    {
+      "transformation": "EXP_COST_POOL_BA",
+      "port": "BLANK",
+      "original": "''",
+      "translated": "''",
+      "confidence": 0.3,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "CST_CNTR_CD",
+      "original": "CST_CNTR_CD",
+      "translated": "SQL: EXP_FILES.CST_CNTR_CD",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "CST_CNTR_EFF_STRT_TS",
+      "original": "CST_CNTR_EFF_STRT_TS",
+      "translated": "CST_CNTR_EFF_STRT_TS",
+      "confidence": 0.3,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "COUNTRY_CD",
+      "original": "'LC'||LGL_CTRY_CD",
+      "translated": "CONCAT('LC', LGL_CTRY_CD)",
+      "confidence": 0.88,
+      "method": "regex"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "NM",
+      "original": "NM",
+      "translated": "NM",
+      "confidence": 0.3,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "NM_HPx",
+      "original": "NM  || '-' ||  IIF(CO_CD = 'EVT','EVERETT','HOUSTON')",
+      "translated": "CONCAT(NM, '-' ||  CASE WHEN CO_CD = 'EVT' THEN 'EVERETT' ELSE 'HOUSTON' END)",
+      "confidence": 0.88,
+      "method": "regex"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "DN",
+      "original": "DN",
+      "translated": "SQL: DN",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "DN_HPx",
+      "original": "DN  || '-' ||  IIF(CO_CD = 'EVT','EVERETT','HOUSTON')",
+      "translated": "CONCAT(DN, '-' ||  CASE WHEN CO_CD = 'EVT' THEN 'EVERETT' ELSE 'HOUSTON' END)",
+      "confidence": 0.88,
+      "method": "regex"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "CST_CNTR_INCTV_IND",
+      "original": "CST_CNTR_INCTV_IND",
+      "translated": "CST_CNTR_INCTV_IND",
+      "confidence": 0.3,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "CST_CNTR_ACN_CD",
+      "original": "CST_CNTR_ACN_CD",
+      "translated": "SQL: EXP_FILES.CST_CNTR_ACN_CD",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "CST_CNTR_INCTV_IND_adhhoc",
+      "original": "IIF(CST_CNTR_INCTV_IND='I','I','C')",
+      "translated": "CASE WHEN CST_CNTR_INCTV_IND='I' THEN 'I' ELSE 'C' END",
+      "confidence": 0.88,
+      "method": "regex"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "CST_CNTR_ACN_CD_Adhoc",
+      "original": "IIF(CST_CNTR_INCTV_IND='I','I','C')",
+      "translated": "CASE WHEN CST_CNTR_INCTV_IND='I' THEN 'I' ELSE 'C' END",
+      "confidence": 0.88,
+      "method": "regex"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "ACCT_CD",
+      "original": "ACCT_CD",
+      "translated": "SQL: ACCT_CD",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "MRU_CD",
+      "original": "MRU_CD",
+      "translated": "MRU_CD",
+      "confidence": 0.3,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "FNCTL_AR_CD",
+      "original": "FNCTL_AR_CD",
+      "translated": "FNCTL_AR_CD",
+      "confidence": 0.3,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "PFT_CNTR_CD",
+      "original": "PFT_CNTR_CD",
+      "translated": "SQL: PFT_CNTR_CD",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "LGL_CTRY_CD",
+      "original": "LGL_CTRY_CD",
+      "translated": "SQL: EXP_FILES.LGL_CTRY_CD",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "CST_CNTR_TYPE",
+      "original": "CST_CNTR_TYPE",
+      "translated": "SQL: EXP_FILES.CST_CNTR_TYPE",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "REFERENCE_ID_HPx",
+      "original": "CST_CNTR_CD || '-' || CO_CD",
+      "translated": "CONCAT(CST_CNTR_CD, '-' || CO_CD)",
+      "confidence": 0.88,
+      "method": "regex"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "MAS_CD",
+      "original": "MAS_CD",
+      "translated": "SQL: MAS_CD",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "COST_POOL_ID",
+      "original": "COST_POOL_ID",
+      "translated": "COST_POOL_ID",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "COST_POOL_SHORT_DESCR",
+      "original": "COST_POOL_SHORT_DESCR",
+      "translated": "SQL: COST_POOL_SHORT_DESCR",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "COST_POOL_LONG_DESCR",
+      "original": "COST_POOL_LONG_DESCR",
+      "translated": "SQL: COST_POOL_LONG_DESCR",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "BUS_AREA",
+      "original": "BUS_AREA",
+      "translated": "SQL: BUS_AREA",
+      "confidence": 0.8,
+      "method": "llm"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "BUS_AREA_HPx",
+      "original": "BUS_AREA || '-' || 'HPE'\r\n--BUS_AREA || '-' || CO_CD",
+      "translated": "CONCAT(BUS_AREA, '-' || 'HPE'\r)\nCONCAT(--BUS_AREA, '-' || CO_CD)",
+      "confidence": 0.88,
+      "method": "regex"
+    },
+    {
+      "transformation": "EXP_FILES",
+      "port": "BLANK_out",
+      "original": "''",
+      "translated": "''",
+      "confidence": 0.3,
+      "method": "llm"
+    }
+  ],
+  "validation_report": {
+    "empty_sql": false,
+    "missing_processors": false,
+    "errors": [],
+    "warnings": [
+      "Processor 'SQ_DUAL_core' has no connections \u2014 may be orphaned",
+      "Processor 'SQ_DUAL_integration' has no connections \u2014 may be orphaned"
+    ],
+    "valid": true,
+    "processor_count": 7,
+    "connection_count": 27
+  },
+  "export_path": ""
+}

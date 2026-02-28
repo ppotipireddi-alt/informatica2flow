@@ -1,0 +1,597 @@
+{
+  "flow_id": "5c542143-8d49-4fb7-8e0c-471b63adbd89",
+  "flow_name": "M_POL_WKD_FILE_COSTCENTER",
+  "revision": {
+    "version": 0
+  },
+  "component": {
+    "id": "f10bc5e1-b2a9-439e-a807-98ee6f312ee6",
+    "name": "M_POL_WKD_FILE_COSTCENTER",
+    "position": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "comments": "Auto-generated from Informatica mapping: M_POL_WKD_FILE_COSTCENTER"
+  },
+  "controller_services": [
+    {
+      "id": "9047da37-f6a4-4660-92de-852c2747d536",
+      "type": "AvroReader",
+      "nifi_class": "org.apache.nifi.avro.AvroReader",
+      "name": "AvroReader",
+      "state": "ENABLED",
+      "config": {}
+    },
+    {
+      "id": "18d60af3-cf3e-4a0e-b9cf-be46d50eb079",
+      "type": "JsonRecordSetWriter",
+      "nifi_class": "org.apache.nifi.json.JsonRecordSetWriter",
+      "name": "JsonRecordSetWriter",
+      "state": "ENABLED",
+      "config": {
+        "Schema Write Strategy": "no-schema",
+        "Date Format": "yyyy-MM-dd",
+        "Timestamp Format": "yyyy-MM-dd HH:mm:ss"
+      }
+    },
+    {
+      "id": "4b244a45-5de4-45a3-90e3-298066dc0529",
+      "type": "CSVReader",
+      "nifi_class": "org.apache.nifi.csv.CSVReader",
+      "name": "CSVReader",
+      "state": "ENABLED",
+      "config": {
+        "schema-access-strategy": "csv-header-derived",
+        "Skip Header Line": "false"
+      }
+    },
+    {
+      "id": "52e22c6e-306f-4157-851d-4a8aa177fdd5",
+      "type": "DBCPConnectionPool",
+      "nifi_class": "org.apache.nifi.dbcp.DBCPConnectionPool",
+      "name": "DBCPConnectionPool",
+      "state": "ENABLED",
+      "config": {
+        "Database Connection URL": "jdbc:postgresql://localhost:5432/postgres",
+        "Database Driver Class Name": "org.postgresql.Driver",
+        "Database Driver Location(s)": "/opt/nifi/nifi-current/lib/postgresql.jar",
+        "Database User": "postgres",
+        "Password": "password",
+        "Max Wait Time": "500 millis",
+        "Max Total Connections": "8"
+      }
+    }
+  ],
+  "processors": [
+    {
+      "id": "9d7af1c0-6cc6-48f6-a9aa-5247c621d39e",
+      "type": "GenerateTableFetch",
+      "name": "Read_DUAL",
+      "nifi_class": "org.apache.nifi.processors.standard.GenerateTableFetch",
+      "config": {
+        "Table Name": "DUAL",
+        "Maximum-value Columns": "LAST_UPDATED"
+      },
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "relationships": [
+        "success"
+      ],
+      "source_ref": "DUAL",
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec"
+      },
+      "auto_terminate_relationships": []
+    },
+    {
+      "id": "4cd97624-3c07-4c6c-8b3d-6cc399c8ca1a",
+      "type": "GenerateTableFetch",
+      "name": "Read_LH_COSTCENTER_INTG",
+      "nifi_class": "org.apache.nifi.processors.standard.GenerateTableFetch",
+      "config": {
+        "Table Name": "LH_COSTCENTER_INTG",
+        "Maximum-value Columns": "LAST_UPDATED"
+      },
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "relationships": [
+        "success"
+      ],
+      "source_ref": "LH_COSTCENTER_INTG",
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec"
+      },
+      "auto_terminate_relationships": []
+    },
+    {
+      "id": "11646157-4856-45b8-a60e-8a712245ffc5",
+      "type": "GenerateTableFetch",
+      "name": "SQ_DUAL_core",
+      "nifi_class": "org.apache.nifi.processors.standard.GenerateTableFetch",
+      "config": {},
+      "position": {
+        "x": 900,
+        "y": 100
+      },
+      "relationships": [
+        "success"
+      ],
+      "informatica_type": "Source Qualifier",
+      "description": "Source Qualifier \u2192 GenerateTableFetch + ExecuteSQL",
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec",
+        "concurrentTasks": 1
+      },
+      "auto_terminate_relationships": []
+    },
+    {
+      "id": "a3a90424-c8d2-4f11-946c-e83996a57479",
+      "type": "GenerateTableFetch",
+      "name": "SQ_LH_COSTCENTER_INTG_ba",
+      "nifi_class": "org.apache.nifi.processors.standard.GenerateTableFetch",
+      "config": {},
+      "position": {
+        "x": 1300,
+        "y": 100
+      },
+      "relationships": [
+        "success"
+      ],
+      "informatica_type": "Source Qualifier",
+      "description": "Source Qualifier \u2192 GenerateTableFetch + ExecuteSQL",
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec",
+        "concurrentTasks": 1
+      },
+      "auto_terminate_relationships": []
+    },
+    {
+      "id": "b5bcbaa3-aa21-46cc-b31a-8d3c4d1bcf68",
+      "type": "GenerateTableFetch",
+      "name": "SQ_LH_COSTCENTER_INTG",
+      "nifi_class": "org.apache.nifi.processors.standard.GenerateTableFetch",
+      "config": {},
+      "position": {
+        "x": 1700,
+        "y": 100
+      },
+      "relationships": [
+        "success"
+      ],
+      "informatica_type": "Source Qualifier",
+      "description": "Source Qualifier \u2192 GenerateTableFetch + ExecuteSQL",
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec",
+        "concurrentTasks": 1
+      },
+      "auto_terminate_relationships": []
+    },
+    {
+      "id": "7d5816d7-2eb6-4bf1-bc27-f1bc3ea1a041",
+      "type": "GenerateTableFetch",
+      "name": "SQ_DUAL_integration",
+      "nifi_class": "org.apache.nifi.processors.standard.GenerateTableFetch",
+      "config": {},
+      "position": {
+        "x": 2100,
+        "y": 100
+      },
+      "relationships": [
+        "success"
+      ],
+      "informatica_type": "Source Qualifier",
+      "description": "Source Qualifier \u2192 GenerateTableFetch + ExecuteSQL",
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec",
+        "concurrentTasks": 1
+      },
+      "auto_terminate_relationships": []
+    },
+    {
+      "id": "770d3e63-3dd3-4496-9004-0a5c6cf8168e",
+      "type": "QueryRecord",
+      "name": "EXP_COST_POOL_BA",
+      "nifi_class": "org.apache.nifi.processors.standard.QueryRecord",
+      "config": {
+        "sql": "SELECT SQL: MEMBER_ID AS MEMBER_ID, SQL: SHORT_DESCR AS SHORT_DESCR, LONG_DESCR AS LONG_DESCR, SQL: MEMBER_CLASS AS MEMBER_CLASS, VALID_FROM_DATE AS VALID_FROM_DATE, CAST(VALID_FROM_DATE, 'YYYY-MM-DD' AS VARCHAR) AS Valid_From_Date_string, '' AS BLANK FROM FLOWFILE",
+        "Record Reader": "9047da37-f6a4-4660-92de-852c2747d536",
+        "Record Writer": "18d60af3-cf3e-4a0e-b9cf-be46d50eb079"
+      },
+      "position": {
+        "x": 900,
+        "y": 300
+      },
+      "relationships": [
+        "sql",
+        "failure",
+        "original"
+      ],
+      "informatica_type": "Expression",
+      "description": "Expression \u2192 SQL SELECT on FlowFile",
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec",
+        "concurrentTasks": 1
+      },
+      "auto_terminate_relationships": [
+        "failure",
+        "original"
+      ]
+    },
+    {
+      "id": "8a3390a0-27af-45ab-876c-5c817a86a9dc",
+      "type": "QueryRecord",
+      "name": "EXP_FILES",
+      "nifi_class": "org.apache.nifi.processors.standard.QueryRecord",
+      "config": {
+        "sql": "SELECT SQL: EXP_FILES.CST_CNTR_CD AS CST_CNTR_CD, CST_CNTR_EFF_STRT_TS AS CST_CNTR_EFF_STRT_TS, CONCAT('LC', LGL_CTRY_CD) AS COUNTRY_CD, SQL: NM AS NM, CONCAT(NM, '-' ||  CASE WHEN CO_CD = 'EVT' THEN 'EVERETT' ELSE 'HOUSTON' END) AS NM_HPx, SQL: DN AS DN, CONCAT(DN, '-' ||  CASE WHEN CO_CD = 'EVT' THEN 'EVERETT' ELSE 'HOUSTON' END) AS DN_HPx, CST_CNTR_INCTV_IND AS CST_CNTR_INCTV_IND, SQL: CST_CNTR_ACN_CD AS CST_CNTR_ACN_CD, CASE WHEN CST_CNTR_INCTV_IND='I' THEN 'I' ELSE 'C' END AS CST_CNTR_INCTV_IND_adhhoc, CASE WHEN CST_CNTR_INCTV_IND='I' THEN 'I' ELSE 'C' END AS CST_CNTR_ACN_CD_Adhoc, SQL: ACCT_CD AS ACCT_CD, SQL: EXP_FILES.MRU_CD AS MRU_CD, FNCTL_AR_CD AS FNCTL_AR_CD, SQL: PFT_CNTR_CD AS PFT_CNTR_CD, SQL: EXP_FILES.LGL_CTRY_CD AS LGL_CTRY_CD, SQL: CST_CNTR_TYPE AS CST_CNTR_TYPE, CO_CD AS CO_CD, CONCAT(CST_CNTR_CD, '-' || CO_CD) AS REFERENCE_ID_HPx, SQL: MAS_CD AS MAS_CD, COST_POOL_ID AS COST_POOL_ID, SQL: COST_POOL_SHORT_DESCR AS COST_POOL_SHORT_DESCR, SQL: EXP_FILES.COST_POOL_LONG_DESCR AS COST_POOL_LONG_DESCR, SQL: BUS_AREA AS BUS_AREA, CONCAT(BUS_AREA, '-' || 'HPE'\r)\nCONCAT(--BUS_AREA, '-' || CO_CD) AS BUS_AREA_HPx, '' AS BLANK_out FROM FLOWFILE",
+        "Record Reader": "9047da37-f6a4-4660-92de-852c2747d536",
+        "Record Writer": "18d60af3-cf3e-4a0e-b9cf-be46d50eb079"
+      },
+      "position": {
+        "x": 1300,
+        "y": 300
+      },
+      "relationships": [
+        "sql",
+        "failure",
+        "original"
+      ],
+      "informatica_type": "Expression",
+      "description": "Expression \u2192 SQL SELECT on FlowFile",
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec",
+        "concurrentTasks": 1
+      },
+      "auto_terminate_relationships": [
+        "failure",
+        "original"
+      ]
+    },
+    {
+      "id": "13fed557-3092-449a-b06e-48f146ae0d3d",
+      "type": "RouteOnAttribute",
+      "name": "FIL_NO_INACTIVATIONS",
+      "nifi_class": "org.apache.nifi.processors.standard.RouteOnAttribute",
+      "config": {
+        "routes": {}
+      },
+      "position": {
+        "x": 1700,
+        "y": 300
+      },
+      "relationships": [
+        "unmatched"
+      ],
+      "informatica_type": "Filter",
+      "description": "Filter \u2192 RouteOnAttribute (keep/drop rows)",
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec",
+        "concurrentTasks": 1
+      },
+      "auto_terminate_relationships": []
+    },
+    {
+      "id": "141a9e57-7768-42c0-ab9c-976cc2c04d39",
+      "type": "PutFile",
+      "name": "Write_PO_WD_COST_CENTER",
+      "nifi_class": "org.apache.nifi.processors.standard.PutFile",
+      "config": {
+        "Directory": "/data/output",
+        "Conflict Resolution Strategy": "replace"
+      },
+      "position": {
+        "x": 2100,
+        "y": 100
+      },
+      "relationships": [
+        "success",
+        "failure"
+      ],
+      "target_ref": "PO_WD_COST_CENTER",
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec"
+      },
+      "auto_terminate_relationships": [
+        "success",
+        "failure"
+      ]
+    },
+    {
+      "id": "0f900084-c51c-4b79-b9a0-bbbd5968d0a5",
+      "type": "PutFile",
+      "name": "Write_PO_WD_LHCC_SCS_MAS",
+      "nifi_class": "org.apache.nifi.processors.standard.PutFile",
+      "config": {
+        "Directory": "/data/output",
+        "Conflict Resolution Strategy": "replace"
+      },
+      "position": {
+        "x": 2100,
+        "y": 300
+      },
+      "relationships": [
+        "success",
+        "failure"
+      ],
+      "target_ref": "PO_WD_LHCC_SCS_MAS",
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec"
+      },
+      "auto_terminate_relationships": [
+        "success",
+        "failure"
+      ]
+    },
+    {
+      "id": "afd7ceec-a441-4586-b82b-699940cc3d19",
+      "type": "PutFile",
+      "name": "Write_PO_WD_COST_POOL_BA",
+      "nifi_class": "org.apache.nifi.processors.standard.PutFile",
+      "config": {
+        "Directory": "/data/output",
+        "Conflict Resolution Strategy": "replace"
+      },
+      "position": {
+        "x": 2100,
+        "y": 500
+      },
+      "relationships": [
+        "success",
+        "failure"
+      ],
+      "target_ref": "PO_WD_COST_POOL_BA",
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec"
+      },
+      "auto_terminate_relationships": [
+        "success",
+        "failure"
+      ]
+    },
+    {
+      "id": "4dc2ce63-0100-42c5-9165-86a294e7143e",
+      "type": "PutDatabaseRecord",
+      "name": "Write_DUAL_TGT",
+      "nifi_class": "org.apache.nifi.processors.standard.PutDatabaseRecord",
+      "config": {
+        "Table Name": "DUAL_TGT",
+        "Statement Type": "INSERT",
+        "Record Reader": "9047da37-f6a4-4660-92de-852c2747d536"
+      },
+      "position": {
+        "x": 2100,
+        "y": 700
+      },
+      "relationships": [
+        "success",
+        "failure",
+        "retry"
+      ],
+      "target_ref": "DUAL_TGT",
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec"
+      },
+      "auto_terminate_relationships": [
+        "success",
+        "failure",
+        "retry"
+      ]
+    },
+    {
+      "id": "800be243-c5f7-4331-bf86-34eb2fc5d2ab",
+      "name": "Write_LH_COSTCENTER_INTG_flag_update",
+      "type": "PutDatabaseRecord",
+      "nifi_class": "org.apache.nifi.processors.standard.PutDatabaseRecord",
+      "position": {
+        "x": 2500.0,
+        "y": 100.0
+      },
+      "config": {
+        "Table Name": "LH_COSTCENTER_INTG_flag_update",
+        "Statement Type": "UPDATE"
+      },
+      "relationships": [
+        "success",
+        "failure",
+        "retry"
+      ],
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec"
+      },
+      "description": "Auto-created target for Informatica instance: LH_COSTCENTER_INTG_flag_update",
+      "auto_terminate_relationships": [
+        "success",
+        "failure",
+        "retry"
+      ]
+    },
+    {
+      "id": "695447e9-9ad0-407f-bcaf-7016a6a32109",
+      "name": "Write_CST_CNTR_flag_update",
+      "type": "PutDatabaseRecord",
+      "nifi_class": "org.apache.nifi.processors.standard.PutDatabaseRecord",
+      "position": {
+        "x": 2500.0,
+        "y": 300.0
+      },
+      "config": {
+        "Table Name": "CST_CNTR_flag_update",
+        "Statement Type": "UPDATE"
+      },
+      "relationships": [
+        "success",
+        "failure",
+        "retry"
+      ],
+      "scheduling": {
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "schedulingPeriod": "0 sec"
+      },
+      "description": "Auto-created target for Informatica instance: CST_CNTR_flag_update",
+      "auto_terminate_relationships": [
+        "success",
+        "failure",
+        "retry"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "5f66d2e9-bc95-484f-881d-8eb647d1f9e4",
+      "source_id": "7d5816d7-2eb6-4bf1-bc27-f1bc3ea1a041",
+      "target_id": "800be243-c5f7-4331-bf86-34eb2fc5d2ab",
+      "selected_relationships": [
+        "success"
+      ],
+      "back_pressure_object_threshold": "10000",
+      "back_pressure_data_size_threshold": "1 GB"
+    },
+    {
+      "id": "8918b4b1-d2be-450f-899b-41c561f32d2a",
+      "source_id": "11646157-4856-45b8-a60e-8a712245ffc5",
+      "target_id": "695447e9-9ad0-407f-bcaf-7016a6a32109",
+      "selected_relationships": [
+        "success"
+      ],
+      "back_pressure_object_threshold": "10000",
+      "back_pressure_data_size_threshold": "1 GB"
+    },
+    {
+      "id": "375c2d8e-5991-45ca-93be-b4edfe8079a7",
+      "source_id": "8a3390a0-27af-45ab-876c-5c817a86a9dc",
+      "target_id": "141a9e57-7768-42c0-ab9c-976cc2c04d39",
+      "selected_relationships": [
+        "sql"
+      ],
+      "back_pressure_object_threshold": "10000",
+      "back_pressure_data_size_threshold": "1 GB"
+    },
+    {
+      "id": "967439e3-bc26-4fb4-b7ac-3c5ce8c0b4b8",
+      "source_id": "770d3e63-3dd3-4496-9004-0a5c6cf8168e",
+      "target_id": "afd7ceec-a441-4586-b82b-699940cc3d19",
+      "selected_relationships": [
+        "sql"
+      ],
+      "back_pressure_object_threshold": "10000",
+      "back_pressure_data_size_threshold": "1 GB"
+    },
+    {
+      "id": "7a2076e0-ab34-4659-84b6-c2438ecc71f3",
+      "source_id": "13fed557-3092-449a-b06e-48f146ae0d3d",
+      "target_id": "0f900084-c51c-4b79-b9a0-bbbd5968d0a5",
+      "selected_relationships": [
+        "unmatched"
+      ],
+      "back_pressure_object_threshold": "10000",
+      "back_pressure_data_size_threshold": "1 GB"
+    },
+    {
+      "id": "36912328-c5fc-42b5-8790-8a0f083b9288",
+      "source_id": "9d7af1c0-6cc6-48f6-a9aa-5247c621d39e",
+      "target_id": "11646157-4856-45b8-a60e-8a712245ffc5",
+      "selected_relationships": [
+        "success"
+      ],
+      "back_pressure_object_threshold": "10000",
+      "back_pressure_data_size_threshold": "1 GB"
+    },
+    {
+      "id": "11841901-ccc0-455e-80e0-7e2307f8d7fd",
+      "source_id": "a3a90424-c8d2-4f11-946c-e83996a57479",
+      "target_id": "770d3e63-3dd3-4496-9004-0a5c6cf8168e",
+      "selected_relationships": [
+        "success"
+      ],
+      "back_pressure_object_threshold": "10000",
+      "back_pressure_data_size_threshold": "1 GB"
+    },
+    {
+      "id": "cafdf081-108d-4551-9b66-8fc77608c1c8",
+      "source_id": "4cd97624-3c07-4c6c-8b3d-6cc399c8ca1a",
+      "target_id": "a3a90424-c8d2-4f11-946c-e83996a57479",
+      "selected_relationships": [
+        "success"
+      ],
+      "back_pressure_object_threshold": "10000",
+      "back_pressure_data_size_threshold": "1 GB"
+    },
+    {
+      "id": "d75491ac-7cdf-41d3-b0cb-bf2de12a03ec",
+      "source_id": "9d7af1c0-6cc6-48f6-a9aa-5247c621d39e",
+      "target_id": "7d5816d7-2eb6-4bf1-bc27-f1bc3ea1a041",
+      "selected_relationships": [
+        "success"
+      ],
+      "back_pressure_object_threshold": "10000",
+      "back_pressure_data_size_threshold": "1 GB"
+    },
+    {
+      "id": "461c6c3b-aad3-4dc1-aa66-5c948898efe9",
+      "source_id": "8a3390a0-27af-45ab-876c-5c817a86a9dc",
+      "target_id": "13fed557-3092-449a-b06e-48f146ae0d3d",
+      "selected_relationships": [
+        "sql"
+      ],
+      "back_pressure_object_threshold": "10000",
+      "back_pressure_data_size_threshold": "1 GB"
+    },
+    {
+      "id": "bc94bc1c-092d-4b15-9a64-95570eb2b808",
+      "source_id": "4cd97624-3c07-4c6c-8b3d-6cc399c8ca1a",
+      "target_id": "b5bcbaa3-aa21-46cc-b31a-8d3c4d1bcf68",
+      "selected_relationships": [
+        "success"
+      ],
+      "back_pressure_object_threshold": "10000",
+      "back_pressure_data_size_threshold": "1 GB"
+    },
+    {
+      "id": "27acc91c-8ecd-4b58-bec9-d8ef4f662df8",
+      "source_id": "b5bcbaa3-aa21-46cc-b31a-8d3c4d1bcf68",
+      "target_id": "8a3390a0-27af-45ab-876c-5c817a86a9dc",
+      "selected_relationships": [
+        "success"
+      ],
+      "back_pressure_object_threshold": "10000",
+      "back_pressure_data_size_threshold": "1 GB"
+    },
+    {
+      "id": "9ac1578c-041d-45c9-8c9e-6bf7ff0cdf0c",
+      "source_id": "13fed557-3092-449a-b06e-48f146ae0d3d",
+      "target_id": "4dc2ce63-0100-42c5-9165-86a294e7143e",
+      "selected_relationships": [
+        "unmatched"
+      ],
+      "back_pressure_object_threshold": "10000",
+      "back_pressure_data_size_threshold": "1 GB"
+    }
+  ],
+  "metadata": {
+    "source_count": 2,
+    "target_count": 4,
+    "transformation_count": 7,
+    "processor_count": 15,
+    "connection_count": 13,
+    "complexity": "SIMPLE",
+    "has_spark": false
+  }
+}

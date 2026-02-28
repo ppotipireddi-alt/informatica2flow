@@ -1,0 +1,23 @@
+[project]
+name = "mig-informatical-nifi"
+version = "0.1.0"
+description = "Informatica to NiFi Agentic Migration System with MCP Server"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=0.3.0",
+    "langchain-community>=0.3.0",
+    "langchain-core>=0.3.0",
+    "langchain-openai>=0.3.0",
+    "langgraph>=0.2.0",
+    "lxml>=5.0.0",
+    "mcp>=1.0.0",
+    "numpy>=1.26.0",
+    "openai>=1.0.0",
+    "psycopg2-binary>=2.9.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "sentence-transformers>=2.0.0",
+    "setuptools>=70.0.0",
+    "urllib3>=2.0.0",
+]

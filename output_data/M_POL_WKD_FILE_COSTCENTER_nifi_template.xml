@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template>
+  <description>Auto-generated from Informatica: M_POL_WKD_FILE_COSTCENTER</description>
+  <name>M_POL_WKD_FILE_COSTCENTER</name>
+  <timestamp>00:00:00 UTC</timestamp>
+  <snippet>
+    <controllerServices>
+      <id>9047da37-f6a4-4660-92de-852c2747d536</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <name>AvroReader</name>
+      <type>org.apache.nifi.avro.AvroReader</type>
+      <state>ENABLED</state>
+      <properties />
+    </controllerServices>
+    <controllerServices>
+      <id>18d60af3-cf3e-4a0e-b9cf-be46d50eb079</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <name>JsonRecordSetWriter</name>
+      <type>org.apache.nifi.json.JsonRecordSetWriter</type>
+      <state>ENABLED</state>
+      <properties>
+        <entry>
+          <key>Schema Write Strategy</key>
+          <value>no-schema</value>
+        </entry>
+        <entry>
+          <key>Date Format</key>
+          <value>yyyy-MM-dd</value>
+        </entry>
+        <entry>
+          <key>Timestamp Format</key>
+          <value>yyyy-MM-dd HH:mm:ss</value>
+        </entry>
+      </properties>
+    </controllerServices>
+    <controllerServices>
+      <id>4b244a45-5de4-45a3-90e3-298066dc0529</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <name>CSVReader</name>
+      <type>org.apache.nifi.csv.CSVReader</type>
+      <state>ENABLED</state>
+      <properties>
+        <entry>
+          <key>schema-access-strategy</key>
+          <value>csv-header-derived</value>
+        </entry>
+        <entry>
+          <key>Skip Header Line</key>
+          <value>false</value>
+        </entry>
+      </properties>
+    </controllerServices>
+    <controllerServices>
+      <id>52e22c6e-306f-4157-851d-4a8aa177fdd5</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <name>DBCPConnectionPool</name>
+      <type>org.apache.nifi.dbcp.DBCPConnectionPool</type>
+      <state>ENABLED</state>
+      <properties>
+        <entry>
+          <key>Database Connection URL</key>
+          <value>jdbc:postgresql://localhost:5432/postgres</value>
+        </entry>
+        <entry>
+          <key>Database Driver Class Name</key>
+          <value>org.postgresql.Driver</value>
+        </entry>
+        <entry>
+          <key>Database Driver Location(s)</key>
+          <value>/opt/nifi/nifi-current/lib/postgresql.jar</value>
+        </entry>
+        <entry>
+          <key>Database User</key>
+          <value>postgres</value>
+        </entry>
+        <entry>
+          <key>Password</key>
+          <value>password</value>
+        </entry>
+        <entry>
+          <key>Max Wait Time</key>
+          <value>500 millis</value>
+        </entry>
+        <entry>
+          <key>Max Total Connections</key>
+          <value>8</value>
+        </entry>
+      </properties>
+    </controllerServices>
+    <processors>
+      <id>9d7af1c0-6cc6-48f6-a9aa-5247c621d39e</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>100.0</x>
+        <y>100.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments />
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Table Name</key>
+            <value>DUAL</value>
+          </entry>
+          <entry>
+            <key>Maximum-value Columns</key>
+            <value>LAST_UPDATED</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Read_DUAL</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.GenerateTableFetch</type>
+    </processors>
+    <processors>
+      <id>4cd97624-3c07-4c6c-8b3d-6cc399c8ca1a</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>100.0</x>
+        <y>100.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments />
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Table Name</key>
+            <value>LH_COSTCENTER_INTG</value>
+          </entry>
+          <entry>
+            <key>Maximum-value Columns</key>
+            <value>LAST_UPDATED</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Read_LH_COSTCENTER_INTG</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.GenerateTableFetch</type>
+    </processors>
+    <processors>
+      <id>11646157-4856-45b8-a60e-8a712245ffc5</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>900.0</x>
+        <y>100.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments>Source Qualifier → GenerateTableFetch + ExecuteSQL</comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties />
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>SQ_DUAL_core</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.GenerateTableFetch</type>
+    </processors>
+    <processors>
+      <id>a3a90424-c8d2-4f11-946c-e83996a57479</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>1300.0</x>
+        <y>100.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments>Source Qualifier → GenerateTableFetch + ExecuteSQL</comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties />
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>SQ_LH_COSTCENTER_INTG_ba</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.GenerateTableFetch</type>
+    </processors>
+    <processors>
+      <id>b5bcbaa3-aa21-46cc-b31a-8d3c4d1bcf68</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>1700.0</x>
+        <y>100.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments>Source Qualifier → GenerateTableFetch + ExecuteSQL</comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties />
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>SQ_LH_COSTCENTER_INTG</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.GenerateTableFetch</type>
+    </processors>
+    <processors>
+      <id>7d5816d7-2eb6-4bf1-bc27-f1bc3ea1a041</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>2100.0</x>
+        <y>100.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments>Source Qualifier → GenerateTableFetch + ExecuteSQL</comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties />
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>SQ_DUAL_integration</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.GenerateTableFetch</type>
+    </processors>
+    <processors>
+      <id>770d3e63-3dd3-4496-9004-0a5c6cf8168e</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>900.0</x>
+        <y>300.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments>Expression → SQL SELECT on FlowFile</comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>sql</key>
+            <value>SELECT SQL: MEMBER_ID AS MEMBER_ID, SQL: SHORT_DESCR AS SHORT_DESCR, LONG_DESCR AS LONG_DESCR, SQL: MEMBER_CLASS AS MEMBER_CLASS, VALID_FROM_DATE AS VALID_FROM_DATE, CAST(VALID_FROM_DATE, 'YYYY-MM-DD' AS VARCHAR) AS Valid_From_Date_string, '' AS BLANK FROM FLOWFILE</value>
+          </entry>
+          <entry>
+            <key>Record Reader</key>
+            <value>9047da37-f6a4-4660-92de-852c2747d536</value>
+          </entry>
+          <entry>
+            <key>Record Writer</key>
+            <value>18d60af3-cf3e-4a0e-b9cf-be46d50eb079</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>EXP_COST_POOL_BA</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.QueryRecord</type>
+    </processors>
+    <processors>
+      <id>8a3390a0-27af-45ab-876c-5c817a86a9dc</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>1300.0</x>
+        <y>300.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments>Expression → SQL SELECT on FlowFile</comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>sql</key>
+            <value>SELECT SQL: EXP_FILES.CST_CNTR_CD AS CST_CNTR_CD, CST_CNTR_EFF_STRT_TS AS CST_CNTR_EFF_STRT_TS, CONCAT('LC', LGL_CTRY_CD) AS COUNTRY_CD, SQL: NM AS NM, CONCAT(NM, '-' ||  CASE WHEN CO_CD = 'EVT' THEN 'EVERETT' ELSE 'HOUSTON' END) AS NM_HPx, SQL: DN AS DN, CONCAT(DN, '-' ||  CASE WHEN CO_CD = 'EVT' THEN 'EVERETT' ELSE 'HOUSTON' END) AS DN_HPx, CST_CNTR_INCTV_IND AS CST_CNTR_INCTV_IND, SQL: CST_CNTR_ACN_CD AS CST_CNTR_ACN_CD, CASE WHEN CST_CNTR_INCTV_IND='I' THEN 'I' ELSE 'C' END AS CST_CNTR_INCTV_IND_adhhoc, CASE WHEN CST_CNTR_INCTV_IND='I' THEN 'I' ELSE 'C' END AS CST_CNTR_ACN_CD_Adhoc, SQL: ACCT_CD AS ACCT_CD, SQL: EXP_FILES.MRU_CD AS MRU_CD, FNCTL_AR_CD AS FNCTL_AR_CD, SQL: PFT_CNTR_CD AS PFT_CNTR_CD, SQL: EXP_FILES.LGL_CTRY_CD AS LGL_CTRY_CD, SQL: CST_CNTR_TYPE AS CST_CNTR_TYPE, CO_CD AS CO_CD, CONCAT(CST_CNTR_CD, '-' || CO_CD) AS REFERENCE_ID_HPx, SQL: MAS_CD AS MAS_CD, COST_POOL_ID AS COST_POOL_ID, SQL: COST_POOL_SHORT_DESCR AS COST_POOL_SHORT_DESCR, SQL: EXP_FILES.COST_POOL_LONG_DESCR AS COST_POOL_LONG_DESCR, SQL: BUS_AREA AS BUS_AREA, CONCAT(BUS_AREA, '-' || 'HPE')
+CONCAT(--BUS_AREA, '-' || CO_CD) AS BUS_AREA_HPx, '' AS BLANK_out FROM FLOWFILE</value>
+          </entry>
+          <entry>
+            <key>Record Reader</key>
+            <value>9047da37-f6a4-4660-92de-852c2747d536</value>
+          </entry>
+          <entry>
+            <key>Record Writer</key>
+            <value>18d60af3-cf3e-4a0e-b9cf-be46d50eb079</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>EXP_FILES</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.QueryRecord</type>
+    </processors>
+    <processors>
+      <id>13fed557-3092-449a-b06e-48f146ae0d3d</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>1700.0</x>
+        <y>300.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments>Filter → RouteOnAttribute (keep/drop rows)</comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties />
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>FIL_NO_INACTIVATIONS</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+    </processors>
+    <processors>
+      <id>141a9e57-7768-42c0-ab9c-976cc2c04d39</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>2100.0</x>
+        <y>100.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments />
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Directory</key>
+            <value>/data/output</value>
+          </entry>
+          <entry>
+            <key>Conflict Resolution Strategy</key>
+            <value>replace</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Write_PO_WD_COST_CENTER</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.PutFile</type>
+    </processors>
+    <processors>
+      <id>0f900084-c51c-4b79-b9a0-bbbd5968d0a5</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>2100.0</x>
+        <y>300.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments />
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Directory</key>
+            <value>/data/output</value>
+          </entry>
+          <entry>
+            <key>Conflict Resolution Strategy</key>
+            <value>replace</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Write_PO_WD_LHCC_SCS_MAS</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.PutFile</type>
+    </processors>
+    <processors>
+      <id>afd7ceec-a441-4586-b82b-699940cc3d19</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>2100.0</x>
+        <y>500.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments />
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Directory</key>
+            <value>/data/output</value>
+          </entry>
+          <entry>
+            <key>Conflict Resolution Strategy</key>
+            <value>replace</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Write_PO_WD_COST_POOL_BA</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.PutFile</type>
+    </processors>
+    <processors>
+      <id>4dc2ce63-0100-42c5-9165-86a294e7143e</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>2100.0</x>
+        <y>700.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments />
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Table Name</key>
+            <value>DUAL_TGT</value>
+          </entry>
+          <entry>
+            <key>Statement Type</key>
+            <value>INSERT</value>
+          </entry>
+          <entry>
+            <key>Record Reader</key>
+            <value>9047da37-f6a4-4660-92de-852c2747d536</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Write_DUAL_TGT</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.PutDatabaseRecord</type>
+    </processors>
+    <processors>
+      <id>800be243-c5f7-4331-bf86-34eb2fc5d2ab</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>2500.0</x>
+        <y>100.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments>Auto-created target for Informatica instance: LH_COSTCENTER_INTG_flag_update</comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Table Name</key>
+            <value>LH_COSTCENTER_INTG_flag_update</value>
+          </entry>
+          <entry>
+            <key>Statement Type</key>
+            <value>UPDATE</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Write_LH_COSTCENTER_INTG_flag_update</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.PutDatabaseRecord</type>
+    </processors>
+    <processors>
+      <id>695447e9-9ad0-407f-bcaf-7016a6a32109</id>
+      <parentGroupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</parentGroupId>
+      <position>
+        <x>2500.0</x>
+        <y>300.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments>Auto-created target for Informatica instance: CST_CNTR_flag_update</comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Table Name</key>
+            <value>CST_CNTR_flag_update</value>
+          </entry>
+          <entry>
+            <key>Statement Type</key>
+            <value>UPDATE</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Write_CST_CNTR_flag_update</name>
+      <relationships />
+      <style />
+      <type>org.apache.nifi.processors.standard.PutDatabaseRecord</type>
+    </processors>
+    <connections>
+      <id>5f66d2e9-bc95-484f-881d-8eb647d1f9e4</id>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>800be243-c5f7-4331-bf86-34eb2fc5d2ab</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <labelIndex>1</labelIndex>
+      <name />
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>7d5816d7-2eb6-4bf1-bc27-f1bc3ea1a041</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>8918b4b1-d2be-450f-899b-41c561f32d2a</id>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>695447e9-9ad0-407f-bcaf-7016a6a32109</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <labelIndex>1</labelIndex>
+      <name />
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>11646157-4856-45b8-a60e-8a712245ffc5</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>375c2d8e-5991-45ca-93be-b4edfe8079a7</id>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>141a9e57-7768-42c0-ab9c-976cc2c04d39</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <labelIndex>1</labelIndex>
+      <name />
+      <selectedRelationships>sql</selectedRelationships>
+      <source>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>8a3390a0-27af-45ab-876c-5c817a86a9dc</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>967439e3-bc26-4fb4-b7ac-3c5ce8c0b4b8</id>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>afd7ceec-a441-4586-b82b-699940cc3d19</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <labelIndex>1</labelIndex>
+      <name />
+      <selectedRelationships>sql</selectedRelationships>
+      <source>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>770d3e63-3dd3-4496-9004-0a5c6cf8168e</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>7a2076e0-ab34-4659-84b6-c2438ecc71f3</id>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>0f900084-c51c-4b79-b9a0-bbbd5968d0a5</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <labelIndex>1</labelIndex>
+      <name />
+      <selectedRelationships>unmatched</selectedRelationships>
+      <source>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>13fed557-3092-449a-b06e-48f146ae0d3d</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>36912328-c5fc-42b5-8790-8a0f083b9288</id>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>11646157-4856-45b8-a60e-8a712245ffc5</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <labelIndex>1</labelIndex>
+      <name />
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>9d7af1c0-6cc6-48f6-a9aa-5247c621d39e</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>11841901-ccc0-455e-80e0-7e2307f8d7fd</id>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>770d3e63-3dd3-4496-9004-0a5c6cf8168e</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <labelIndex>1</labelIndex>
+      <name />
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>a3a90424-c8d2-4f11-946c-e83996a57479</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>cafdf081-108d-4551-9b66-8fc77608c1c8</id>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>a3a90424-c8d2-4f11-946c-e83996a57479</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <labelIndex>1</labelIndex>
+      <name />
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>4cd97624-3c07-4c6c-8b3d-6cc399c8ca1a</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>d75491ac-7cdf-41d3-b0cb-bf2de12a03ec</id>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>7d5816d7-2eb6-4bf1-bc27-f1bc3ea1a041</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <labelIndex>1</labelIndex>
+      <name />
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>9d7af1c0-6cc6-48f6-a9aa-5247c621d39e</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>461c6c3b-aad3-4dc1-aa66-5c948898efe9</id>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>13fed557-3092-449a-b06e-48f146ae0d3d</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <labelIndex>1</labelIndex>
+      <name />
+      <selectedRelationships>sql</selectedRelationships>
+      <source>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>8a3390a0-27af-45ab-876c-5c817a86a9dc</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>bc94bc1c-092d-4b15-9a64-95570eb2b808</id>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>b5bcbaa3-aa21-46cc-b31a-8d3c4d1bcf68</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <labelIndex>1</labelIndex>
+      <name />
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>4cd97624-3c07-4c6c-8b3d-6cc399c8ca1a</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>27acc91c-8ecd-4b58-bec9-d8ef4f662df8</id>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>8a3390a0-27af-45ab-876c-5c817a86a9dc</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <labelIndex>1</labelIndex>
+      <name />
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>b5bcbaa3-aa21-46cc-b31a-8d3c4d1bcf68</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>9ac1578c-041d-45c9-8c9e-6bf7ff0cdf0c</id>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>4dc2ce63-0100-42c5-9165-86a294e7143e</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <labelIndex>1</labelIndex>
+      <name />
+      <selectedRelationships>unmatched</selectedRelationships>
+      <source>
+        <groupId>5c542143-8d49-4fb7-8e0c-471b63adbd89</groupId>
+        <id>13fed557-3092-449a-b06e-48f146ae0d3d</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+  </snippet>
+</template>

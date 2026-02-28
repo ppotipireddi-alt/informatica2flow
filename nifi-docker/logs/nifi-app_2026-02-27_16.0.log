@@ -1,0 +1,1330 @@
+2026-02-27 16:58:46,332 INFO [main] org.apache.nifi.runtime.Application Starting NiFi 2.8.0 using Java 21.0.10+10-LTS with PID 75
+2026-02-27 16:58:46,335 INFO [main] o.apache.nifi.runtime.PropertiesProvider Loading Application Properties [/opt/nifi/nifi-current/conf/nifi.properties]
+2026-02-27 16:58:46,355 INFO [main] org.apache.nifi.nar.NarUnpacker Expanding 117 NAR files started
+2026-02-27 16:58:52,297 INFO [main] org.apache.nifi.nar.NarUnpacker Expanded 117 NAR files in 5.941 seconds (5941053877 ns)
+2026-02-27 16:58:52,306 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-jetty-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-jetty-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,312 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,386 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-framework-zookeeper-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-framework-zookeeper-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,404 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-windows-event-log-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-windows-event-log-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,407 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-ldap-iaa-providers-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-ldap-iaa-providers-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,411 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-compress-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-compress-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,414 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-stateful-analysis-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-stateful-analysis-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,415 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-standard-services-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-standard-services-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,417 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-hl7-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-hl7-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,421 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-server-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-server-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,439 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-distributed-cache-services-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-distributed-cache-services-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,442 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-http-context-map-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-http-context-map-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,443 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-framework-kubernetes-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-framework-kubernetes-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,448 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-amqp-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-amqp-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,452 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-single-user-iaa-providers-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-single-user-iaa-providers-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,453 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-database-dialect-service-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-database-dialect-service-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,454 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-email-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-email-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,456 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-provenance-repository-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-provenance-repository-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,459 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-update-attribute-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-update-attribute-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,462 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-dbcp-service-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-dbcp-service-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,465 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-kerberos-iaa-providers-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-kerberos-iaa-providers-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,468 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-evtx-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-evtx-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,470 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-ssl-context-service-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-ssl-context-service-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,470 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-workday-processors-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-workday-processors-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,471 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-hazelcast-services-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-hazelcast-services-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,472 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-proxy-configuration-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-proxy-configuration-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,473 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-standard-shared-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-standard-shared-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,503 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-file-resource-service-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-file-resource-service-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,504 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-hashicorp-vault-client-service-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-hashicorp-vault-client-service-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,505 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-enrich-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-enrich-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,506 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-atlassian-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-atlassian-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,508 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-gcp-services-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-gcp-services-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,511 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-cipher-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-cipher-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,512 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-websocket-services-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-websocket-services-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,513 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-kafka-service-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-kafka-service-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,514 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-kerberos-user-service-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-kerberos-user-service-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,523 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,540 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-standard-content-viewer-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-standard-content-viewer-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,541 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-db-schema-registry-service-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-db-schema-registry-service-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,542 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-mqtt-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-mqtt-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,544 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-lookup-services-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-lookup-services-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,546 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-oauth2-provider-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-oauth2-provider-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,547 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-poi-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-poi-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,551 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-jolt-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-jolt-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,552 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-shopify-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-shopify-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,552 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-protobuf-services-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-protobuf-services-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,555 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-hazelcast-services-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-hazelcast-services-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,560 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-splunk-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-splunk-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,561 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-mongodb-client-service-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-mongodb-client-service-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,563 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-hashicorp-vault-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-hashicorp-vault-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,566 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-key-service-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-key-service-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,566 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-dropbox-services-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-dropbox-services-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,567 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-airtable-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-airtable-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,567 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-geohash-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-geohash-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,568 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-snmp-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-snmp-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,569 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-github-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-github-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,571 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-azure-services-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-azure-services-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,578 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-jslt-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-jslt-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,580 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,590 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-kafka-3-service-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-kafka-3-service-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,592 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-zendesk-services-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-zendesk-services-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,593 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-kafka-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-kafka-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,593 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-salesforce-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-salesforce-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,595 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-web-client-provider-service-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-web-client-provider-service-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,595 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-gitlab-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-gitlab-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,597 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-box-services-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-box-services-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,599 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-smb-client-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-smb-client-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,600 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-hubspot-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-hubspot-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,601 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-pgp-service-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-pgp-service-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,602 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,615 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-registry-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-registry-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,617 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-network-processors-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-network-processors-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,618 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-social-media-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-social-media-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,620 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,623 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-aws-service-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-aws-service-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,629 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,634 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-cdc-mysql-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-cdc-mysql-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,635 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-py4j-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-py4j-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,636 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-mongodb-services-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-mongodb-services-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,637 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-websocket-services-jetty-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-websocket-services-jetty-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,638 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-redis-service-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-redis-service-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,642 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-kafka-service-aws-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-kafka-service-aws-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,645 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-apicurio-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-apicurio-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,646 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-redis-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-redis-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,646 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-avro-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-avro-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,647 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-opentelemetry-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-opentelemetry-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,649 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-zendesk-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-zendesk-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,649 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-smb-smbj-client-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-smb-smbj-client-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,651 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,667 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-confluent-platform-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-confluent-platform-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,669 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-mongodb-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-mongodb-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,670 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-websocket-processors-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-websocket-processors-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,670 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-site-to-site-reporting-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-site-to-site-reporting-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,672 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-box-services-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-box-services-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,673 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-record-sink-service-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-record-sink-service-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,674 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-jms-cf-service-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-jms-cf-service-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,674 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-smb-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-smb-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,675 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-elasticsearch-client-service-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-elasticsearch-client-service-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,675 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-pgp-service-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-pgp-service-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,676 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-slack-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-slack-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,678 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-iceberg-shared-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-iceberg-shared-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,680 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-flow-registry-client-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-flow-registry-client-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,682 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-groovyx-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-groovyx-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,693 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-jms-processors-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-jms-processors-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,695 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-iceberg-service-api-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-iceberg-service-api-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,696 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-elasticsearch-client-service-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-elasticsearch-client-service-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,697 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-aws-kinesis-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-aws-kinesis-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,700 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-dropbox-services-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-dropbox-services-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,700 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-dropbox-processors-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-dropbox-processors-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,702 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-pgp-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-pgp-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,703 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-iceberg-aws-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-iceberg-aws-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,706 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,719 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-iceberg-processors-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-iceberg-processors-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,720 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-elasticsearch-restapi-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-elasticsearch-restapi-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,721 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-iceberg-azure-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-iceberg-azure-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,723 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-iceberg-rest-catalog-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-iceberg-rest-catalog-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,724 INFO [main] org.apache.nifi.nar.NarClassLoaders Loaded NAR file: /opt/nifi/nifi-current/./work/nar/extensions/nifi-iceberg-parquet-writer-nar-2.8.0.nar-unpacked as class loader org.apache.nifi.nar.NarClassLoader[./work/nar/extensions/nifi-iceberg-parquet-writer-nar-2.8.0.nar-unpacked]
+2026-02-27 16:58:52,727 INFO [main] org.apache.nifi.nar.NarClassLoaders Found NiFiServer implementation org.apache.nifi.web.server.JettyServer in org.apache.nifi:nifi-server-nar:2.8.0
+2026-02-27 16:58:52,729 INFO [main] o.a.nifi.properties.NiFiPropertiesLoader Loading Application Properties [/opt/nifi/nifi-current/conf/nifi.properties]
+2026-02-27 16:58:52,731 WARN [main] o.a.nifi.properties.NiFiPropertiesLoader Generating Random Sensitive Properties Key [nifi.sensitive.props.key]
+2026-02-27 16:58:52,735 INFO [main] o.a.nifi.properties.NiFiPropertiesLoader NiFi Properties [/opt/nifi/nifi-current/conf/nifi.properties] updated with Sensitive Properties Key
+2026-02-27 16:58:52,735 INFO [main] o.a.nifi.properties.NiFiPropertiesLoader Loading Application Properties [/opt/nifi/nifi-current/conf/nifi.properties]
+2026-02-27 16:58:52,820 INFO [main] o.a.n.f.ssl.FrameworkKeyManagerBuilder Key Manager loaded from Key Store [./conf/keystore.p12]
+2026-02-27 16:58:52,837 INFO [main] o.a.n.f.ssl.FrameworkTrustManagerBuilder Trust Manager loaded from Trust Store [./conf/truststore.p12]
+2026-02-27 16:58:53,118 INFO [main] org.apache.nifi.web.server.JettyServer Loading WAR [/opt/nifi/nifi-current/./work/nar/extensions/nifi-standard-content-viewer-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-standard-content-viewer-2.8.0.war] Context Path [/nifi-standard-content-viewer-2.8.0]
+2026-02-27 16:58:53,121 INFO [main] org.apache.nifi.web.server.JettyServer Loading WAR [/opt/nifi/nifi-current/./work/nar/extensions/nifi-update-attribute-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-update-attribute-ui-2.8.0.war] Context Path [/nifi-update-attribute-ui-2.8.0]
+2026-02-27 16:58:53,121 INFO [main] org.apache.nifi.web.server.JettyServer Loading UI extension [ProcessorConfiguration, /nifi-update-attribute-ui-2.8.0] for org.apache.nifi.processors.attributes.UpdateAttribute:org.apache.nifi:nifi-update-attribute-nar:2.8.0
+2026-02-27 16:58:53,123 INFO [main] org.apache.nifi.web.server.JettyServer Loading WAR [/opt/nifi/nifi-current/./work/nar/extensions/nifi-jolt-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-jolt-transform-json-ui-2.8.0.war] Context Path [/nifi-jolt-transform-json-ui-2.8.0]
+2026-02-27 16:58:53,123 INFO [main] org.apache.nifi.web.server.JettyServer Loading UI extension [ProcessorConfiguration, /nifi-jolt-transform-json-ui-2.8.0] for org.apache.nifi.processors.jolt.JoltTransformJSON:org.apache.nifi:nifi-jolt-nar:2.8.0
+2026-02-27 16:58:53,127 INFO [main] org.apache.nifi.web.server.JettyServer Loading WAR [/opt/nifi/nifi-current/./work/nar/extensions/nifi-server-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-ui-2.8.0.war] Context Path [/nifi]
+2026-02-27 16:58:53,128 INFO [main] org.apache.nifi.web.server.JettyServer Loading WAR [/opt/nifi/nifi-current/./work/nar/extensions/nifi-server-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-web-api-2.8.0.war] Context Path [/nifi-api]
+2026-02-27 16:58:53,131 INFO [main] org.apache.nifi.web.server.JettyServer Loading Docs [/opt/nifi/nifi-current/docs] Context Path [/nifi-api]
+2026-02-27 16:58:53,140 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-jetty-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,143 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-framework-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,145 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-framework-zookeeper-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,147 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-windows-event-log-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,148 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-ldap-iaa-providers-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,149 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-compress-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,149 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-stateful-analysis-nar:2.8.0 in 0 millis
+2026-02-27 16:58:53,150 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-standard-services-api-nar:2.8.0 in 0 millis
+2026-02-27 16:58:53,151 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-hl7-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,154 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-server-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,155 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-distributed-cache-services-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,156 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-http-context-map-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,159 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-framework-kubernetes-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,160 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-amqp-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,161 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-single-user-iaa-providers-nar:2.8.0 in 0 millis
+2026-02-27 16:58:53,163 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-database-dialect-service-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,164 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-email-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,165 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-provenance-repository-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,166 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-update-attribute-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,168 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-dbcp-service-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,169 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-kerberos-iaa-providers-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,170 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-evtx-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,171 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-ssl-context-service-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,172 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-workday-processors-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,173 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-hazelcast-services-api-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,175 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-proxy-configuration-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,176 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-standard-shared-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,178 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-file-resource-service-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,179 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-hashicorp-vault-client-service-api-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,181 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-enrich-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,183 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-atlassian-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,184 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-gcp-services-api-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,186 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-cipher-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,187 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-websocket-services-api-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,189 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-kafka-service-api-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,190 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-kerberos-user-service-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,193 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-standard-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,194 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-standard-content-viewer-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,195 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-db-schema-registry-service-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,197 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-mqtt-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,198 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-lookup-services-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,200 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-oauth2-provider-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,202 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-poi-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,203 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-jolt-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,205 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-shopify-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,206 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-protobuf-services-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,208 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-hazelcast-services-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,211 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-splunk-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,212 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-mongodb-client-service-api-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,214 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-hashicorp-vault-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,215 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-key-service-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,217 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-dropbox-services-api-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,218 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-airtable-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,220 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-geohash-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,222 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-snmp-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,223 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-github-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,224 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-azure-services-api-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,226 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-jslt-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,228 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-gcp-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,230 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-kafka-3-service-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,231 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-zendesk-services-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,233 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-kafka-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,234 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-salesforce-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,236 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-web-client-provider-service-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,237 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-gitlab-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,239 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-box-services-api-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,240 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-smb-client-api-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,241 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-hubspot-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,243 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-pgp-service-api-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,244 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-box-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,246 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-registry-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,249 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-network-processors-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,251 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-social-media-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,252 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,254 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-aws-service-api-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,257 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-scripting-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,259 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-cdc-mysql-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,261 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-py4j-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,263 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-mongodb-services-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,264 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-websocket-services-jetty-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,285 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-redis-service-api-nar:2.8.0 in 21 millis
+2026-02-27 16:58:53,287 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-kafka-service-aws-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,289 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-apicurio-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,291 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-redis-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,292 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-avro-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,293 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-opentelemetry-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,294 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-zendesk-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,296 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-smb-smbj-client-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,298 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-azure-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,299 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-confluent-platform-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,301 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-mongodb-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,302 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-websocket-processors-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,303 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-site-to-site-reporting-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,305 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-box-services-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,306 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-record-sink-service-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,307 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-jms-cf-service-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,309 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-smb-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,310 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-elasticsearch-client-service-api-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,312 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-pgp-service-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,313 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-slack-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,314 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-iceberg-shared-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,316 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-flow-registry-client-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,317 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-groovyx-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,319 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-jms-processors-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,320 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-iceberg-service-api-nar:2.8.0 in 1 millis
+2026-02-27 16:58:53,323 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-elasticsearch-client-service-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,326 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-aws-kinesis-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,328 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-dropbox-services-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,331 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-dropbox-processors-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,333 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-pgp-nar:2.8.0 in 2 millis
+2026-02-27 16:58:53,336 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-iceberg-aws-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,340 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-aws-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,344 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-iceberg-processors-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,347 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-elasticsearch-restapi-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,351 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-iceberg-azure-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,355 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-iceberg-rest-catalog-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,358 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Loaded extensions for org.apache.nifi:nifi-iceberg-parquet-writer-nar:2.8.0 in 3 millis
+2026-02-27 16:58:53,359 INFO [main] o.a.n.n.StandardExtensionDiscoveringManager Extension Type Mapping to Bundle:
+	=== LoginIdentityProvider Type ===
+	org.apache.nifi.ldap.LdapProvider
+		org.apache.nifi:nifi-ldap-iaa-providers-nar:2.8.0 || ./work/nar/extensions/nifi-ldap-iaa-providers-nar-2.8.0.nar-unpacked
+	org.apache.nifi.kerberos.KerberosProvider
+		org.apache.nifi:nifi-kerberos-iaa-providers-nar:2.8.0 || ./work/nar/extensions/nifi-kerberos-iaa-providers-nar-2.8.0.nar-unpacked
+	org.apache.nifi.authentication.single.user.SingleUserLoginIdentityProvider
+		org.apache.nifi:nifi-single-user-iaa-providers-nar:2.8.0 || ./work/nar/extensions/nifi-single-user-iaa-providers-nar-2.8.0.nar-unpacked
+	=== End LoginIdentityProvider types ===
+	=== ContentRepository Type ===
+	org.apache.nifi.controller.repository.FileSystemRepository
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	=== End ContentRepository types ===
+	=== AssetManager Type ===
+	org.apache.nifi.asset.StandardAssetManager
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	=== End AssetManager types ===
+	=== ControllerService Type ===
+	org.apache.nifi.kerberos.KerberosTicketCacheUserService
+		org.apache.nifi:nifi-kerberos-user-service-nar:2.8.0 || ./work/nar/extensions/nifi-kerberos-user-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.azure.storage.AzureDataLakeStorageFileResourceService
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.ssl.StandardRestrictedSSLContextService
+		org.apache.nifi:nifi-ssl-context-service-nar:2.8.0 || ./work/nar/extensions/nifi-ssl-context-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.azure.data.explorer.StandardKustoQueryService
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.confluent.schemaregistry.ConfluentEncodedSchemaReferenceWriter
+		org.apache.nifi:nifi-confluent-platform-nar:2.8.0 || ./work/nar/extensions/nifi-confluent-platform-nar-2.8.0.nar-unpacked
+	org.apache.nifi.oauth2.StandardOauth2AccessTokenProvider
+		org.apache.nifi:nifi-oauth2-provider-nar:2.8.0 || ./work/nar/extensions/nifi-oauth2-provider-nar-2.8.0.nar-unpacked
+	org.apache.nifi.kerberos.KerberosPasswordUserService
+		org.apache.nifi:nifi-kerberos-user-service-nar:2.8.0 || ./work/nar/extensions/nifi-kerberos-user-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.azure.cosmos.document.AzureCosmosDBClientService
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.pgp.service.standard.StandardPGPPublicKeyService
+		org.apache.nifi:nifi-pgp-service-nar:2.8.0 || ./work/nar/extensions/nifi-pgp-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.schema.inference.VolatileSchemaCache
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.csv.CSVReader
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.xml.XMLRecordSetWriter
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.avro.AvroRecordSetWriter
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.record.script.ScriptedRecordSetWriter
+		org.apache.nifi:nifi-scripting-nar:2.8.0 || ./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.avro.AvroReader
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.box.controllerservices.DeveloperBoxClientService
+		org.apache.nifi:nifi-box-services-nar:2.8.0 || ./work/nar/extensions/nifi-box-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.yaml.YamlTreeReader
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.elasticsearch.ElasticSearchLookupService
+		org.apache.nifi:nifi-elasticsearch-client-service-nar:2.8.0 || ./work/nar/extensions/nifi-elasticsearch-client-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.distributed.cache.server.SetCacheServer
+		org.apache.nifi:nifi-distributed-cache-services-nar:2.8.0 || ./work/nar/extensions/nifi-distributed-cache-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.iceberg.aws.S3IcebergFileIOProvider
+		org.apache.nifi:nifi-iceberg-aws-nar:2.8.0 || ./work/nar/extensions/nifi-iceberg-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.azure.eventhub.AzureEventHubRecordSink
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.json.JsonPathReader
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.record.sink.LoggingRecordSink
+		org.apache.nifi:nifi-record-sink-service-nar:2.8.0 || ./work/nar/extensions/nifi-record-sink-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.proxy.StandardProxyConfigurationService
+		org.apache.nifi:nifi-proxy-configuration-nar:2.8.0 || ./work/nar/extensions/nifi-proxy-configuration-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.maxmind.IPLookupService
+		org.apache.nifi:nifi-lookup-services-nar:2.8.0 || ./work/nar/extensions/nifi-lookup-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.excel.ExcelReader
+		org.apache.nifi:nifi-poi-nar:2.8.0 || ./work/nar/extensions/nifi-poi-nar-2.8.0.nar-unpacked
+	org.apache.nifi.record.sink.event.UDPEventRecordSink
+		org.apache.nifi:nifi-record-sink-service-nar:2.8.0 || ./work/nar/extensions/nifi-record-sink-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.box.controllerservices.JsonConfigBasedBoxClientService
+		org.apache.nifi:nifi-box-services-nar:2.8.0 || ./work/nar/extensions/nifi-box-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.dbcp.HikariCPConnectionPool
+		org.apache.nifi:nifi-dbcp-service-nar:2.8.0 || ./work/nar/extensions/nifi-dbcp-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.oauth2.JWTBearerOAuth2AccessTokenProvider
+		org.apache.nifi:nifi-oauth2-provider-nar:2.8.0 || ./work/nar/extensions/nifi-oauth2-provider-nar-2.8.0.nar-unpacked
+	org.apache.nifi.websocket.jetty.JettyWebSocketClient
+		org.apache.nifi:nifi-websocket-services-jetty-nar:2.8.0 || ./work/nar/extensions/nifi-websocket-services-jetty-nar-2.8.0.nar-unpacked
+	org.apache.nifi.jms.cf.JMSConnectionFactoryProvider
+		org.apache.nifi:nifi-jms-processors-nar:2.8.0 || ./work/nar/extensions/nifi-jms-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.ssl.StandardSSLContextService
+		org.apache.nifi:nifi-ssl-context-service-nar:2.8.0 || ./work/nar/extensions/nifi-ssl-context-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.RecordSetWriterLookup
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.azure.storage.AzureStorageCredentialsControllerService_v12
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.apicurio.schemaregistry.ApicurioSchemaRegistry
+		org.apache.nifi:nifi-apicurio-nar:2.8.0 || ./work/nar/extensions/nifi-apicurio-nar-2.8.0.nar-unpacked
+	org.apache.nifi.syslog.Syslog5424Reader
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.record.script.ScriptedReader
+		org.apache.nifi:nifi-scripting-nar:2.8.0 || ./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.RestLookupService
+		org.apache.nifi:nifi-lookup-services-nar:2.8.0 || ./work/nar/extensions/nifi-lookup-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.dropbox.StandardDropboxCredentialService
+		org.apache.nifi:nifi-dropbox-services-nar:2.8.0 || ./work/nar/extensions/nifi-dropbox-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.dbcp.DBCPConnectionPoolLookup
+		org.apache.nifi:nifi-dbcp-service-nar:2.8.0 || ./work/nar/extensions/nifi-dbcp-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.record.sink.HttpRecordSink
+		org.apache.nifi:nifi-record-sink-service-nar:2.8.0 || ./work/nar/extensions/nifi-record-sink-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.kerberos.KerberosKeytabUserService
+		org.apache.nifi:nifi-kerberos-user-service-nar:2.8.0 || ./work/nar/extensions/nifi-kerberos-user-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.hazelcast.services.cachemanager.ExternalHazelcastCacheManager
+		org.apache.nifi:nifi-hazelcast-services-nar:2.8.0 || ./work/nar/extensions/nifi-hazelcast-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.syslog.SyslogReader
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.script.ScriptedLookupService
+		org.apache.nifi:nifi-scripting-nar:2.8.0 || ./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.ssl.PEMEncodedSSLContextProvider
+		org.apache.nifi:nifi-ssl-context-service-nar:2.8.0 || ./work/nar/extensions/nifi-ssl-context-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.vault.hashicorp.StandardHashiCorpVaultClientService
+		org.apache.nifi:nifi-hashicorp-vault-nar:2.8.0 || ./work/nar/extensions/nifi-hashicorp-vault-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.protobuf.ProtobufReader
+		org.apache.nifi:nifi-protobuf-services-nar:2.8.0 || ./work/nar/extensions/nifi-protobuf-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.http.StandardHttpContextMap
+		org.apache.nifi:nifi-http-context-map-nar:2.8.0 || ./work/nar/extensions/nifi-http-context-map-nar-2.8.0.nar-unpacked
+	org.apache.nifi.redis.service.SimpleRedisDistributedMapCacheClientService
+		org.apache.nifi:nifi-redis-nar:2.8.0 || ./work/nar/extensions/nifi-redis-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.DistributedMapCacheLookupService
+		org.apache.nifi:nifi-lookup-services-nar:2.8.0 || ./work/nar/extensions/nifi-lookup-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.db.schemaregistry.DatabaseTableSchemaRegistry
+		org.apache.nifi:nifi-db-schema-registry-service-nar:2.8.0 || ./work/nar/extensions/nifi-db-schema-registry-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.protobuf.StandardProtobufReader
+		org.apache.nifi:nifi-protobuf-services-nar:2.8.0 || ./work/nar/extensions/nifi-protobuf-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.db.DatabaseRecordLookupService
+		org.apache.nifi:nifi-lookup-services-nar:2.8.0 || ./work/nar/extensions/nifi-lookup-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.slack.SlackRecordSink
+		org.apache.nifi:nifi-slack-nar:2.8.0 || ./work/nar/extensions/nifi-slack-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.iceberg.azure.ADLSIcebergFileIOProvider
+		org.apache.nifi:nifi-iceberg-azure-nar:2.8.0 || ./work/nar/extensions/nifi-iceberg-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.json.JsonRecordSetWriter
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.record.sink.lookup.RecordSinkServiceLookup
+		org.apache.nifi:nifi-record-sink-service-nar:2.8.0 || ./work/nar/extensions/nifi-record-sink-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.schemaregistry.services.AvroSchemaRegistry
+		org.apache.nifi:nifi-registry-nar:2.8.0 || ./work/nar/extensions/nifi-registry-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.s3.service.S3FileResourceService
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.SimpleCsvFileLookupService
+		org.apache.nifi:nifi-lookup-services-nar:2.8.0 || ./work/nar/extensions/nifi-lookup-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.mongodb.MongoDBControllerService
+		org.apache.nifi:nifi-mongodb-services-nar:2.8.0 || ./work/nar/extensions/nifi-mongodb-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.confluent.schemaregistry.ConfluentSchemaRegistry
+		org.apache.nifi:nifi-confluent-platform-nar:2.8.0 || ./work/nar/extensions/nifi-confluent-platform-nar-2.8.0.nar-unpacked
+	org.apache.nifi.reporting.sink.SiteToSiteReportingRecordSink
+		org.apache.nifi:nifi-site-to-site-reporting-nar:2.8.0 || ./work/nar/extensions/nifi-site-to-site-reporting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.jms.cf.JndiJmsConnectionFactoryProvider
+		org.apache.nifi:nifi-jms-processors-nar:2.8.0 || ./work/nar/extensions/nifi-jms-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.csv.CSVRecordSetWriter
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.script.SimpleScriptedLookupService
+		org.apache.nifi:nifi-scripting-nar:2.8.0 || ./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.zendesk.ZendeskRecordSink
+		org.apache.nifi:nifi-zendesk-services-nar:2.8.0 || ./work/nar/extensions/nifi-zendesk-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.xml.XMLReader
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.redis.service.RedisConnectionPoolService
+		org.apache.nifi:nifi-redis-nar:2.8.0 || ./work/nar/extensions/nifi-redis-nar-2.8.0.nar-unpacked
+	org.apache.nifi.distributed.cache.client.SetCacheClientService
+		org.apache.nifi:nifi-distributed-cache-services-nar:2.8.0 || ./work/nar/extensions/nifi-distributed-cache-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.key.service.StandardPrivateKeyService
+		org.apache.nifi:nifi-key-service-nar:2.8.0 || ./work/nar/extensions/nifi-key-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.azure.storage.ADLSCredentialsControllerServiceLookup
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.PropertiesFileLookupService
+		org.apache.nifi:nifi-lookup-services-nar:2.8.0 || ./work/nar/extensions/nifi-lookup-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.aws.schemaregistry.AmazonGlueEncodedSchemaReferenceReader
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.azure.storage.AzureStorageCredentialsControllerServiceLookup_v12
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.fileresource.service.StandardFileResourceService
+		org.apache.nifi:nifi-file-resource-service-nar:2.8.0 || ./work/nar/extensions/nifi-file-resource-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.XMLFileLookupService
+		org.apache.nifi:nifi-lookup-services-nar:2.8.0 || ./work/nar/extensions/nifi-lookup-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.azure.storage.AzureBlobStorageFileResourceService
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.record.sink.EmailRecordSink
+		org.apache.nifi:nifi-record-sink-service-nar:2.8.0 || ./work/nar/extensions/nifi-record-sink-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.s3.encryption.StandardS3EncryptionService
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.schemaregistry.services.StandardJsonSchemaRegistry
+		org.apache.nifi:nifi-registry-nar:2.8.0 || ./work/nar/extensions/nifi-registry-nar-2.8.0.nar-unpacked
+	org.apache.nifi.elasticsearch.ElasticSearchClientServiceImpl
+		org.apache.nifi:nifi-elasticsearch-client-service-nar:2.8.0 || ./work/nar/extensions/nifi-elasticsearch-client-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.grok.GrokReader
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.record.sink.script.ScriptedRecordSink
+		org.apache.nifi:nifi-scripting-nar:2.8.0 || ./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.database.dialect.service.StandardDatabaseDialectService
+		org.apache.nifi:nifi-database-dialect-service-nar:2.8.0 || ./work/nar/extensions/nifi-database-dialect-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.hazelcast.services.cacheclient.HazelcastMapCacheClient
+		org.apache.nifi:nifi-hazelcast-services-nar:2.8.0 || ./work/nar/extensions/nifi-hazelcast-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.websocket.jetty.JettyWebSocketServer
+		org.apache.nifi:nifi-websocket-services-jetty-nar:2.8.0 || ./work/nar/extensions/nifi-websocket-services-jetty-nar-2.8.0.nar-unpacked
+	org.apache.nifi.text.FreeFormTextRecordSetWriter
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.kafka.service.aws.AmazonMSKConnectionService
+		org.apache.nifi:nifi-kafka-service-aws-nar:2.8.0 || ./work/nar/extensions/nifi-kafka-service-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.azure.storage.ADLSCredentialsControllerService
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.distributed.cache.server.map.MapCacheServer
+		org.apache.nifi:nifi-distributed-cache-services-nar:2.8.0 || ./work/nar/extensions/nifi-distributed-cache-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.aws.schemaregistry.AmazonGlueSchemaRegistry
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.azure.data.explorer.StandardKustoIngestService
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.record.sink.db.DatabaseRecordSink
+		org.apache.nifi:nifi-dbcp-service-nar:2.8.0 || ./work/nar/extensions/nifi-dbcp-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.credentials.service.GCPCredentialsControllerService
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.mongodb.MongoDBLookupService
+		org.apache.nifi:nifi-mongodb-services-nar:2.8.0 || ./work/nar/extensions/nifi-mongodb-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.cef.CEFReader
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.azure.StandardAzureCredentialsControllerService
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.pgp.service.standard.StandardPGPPrivateKeyService
+		org.apache.nifi:nifi-pgp-service-nar:2.8.0 || ./work/nar/extensions/nifi-pgp-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.distributed.cache.client.MapCacheClientService
+		org.apache.nifi:nifi-distributed-cache-services-nar:2.8.0 || ./work/nar/extensions/nifi-distributed-cache-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.SimpleKeyValueLookupService
+		org.apache.nifi:nifi-lookup-services-nar:2.8.0 || ./work/nar/extensions/nifi-lookup-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.storage.GCSFileResourceService
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.iceberg.parquet.ParquetIcebergWriter
+		org.apache.nifi:nifi-iceberg-parquet-writer-nar:2.8.0 || ./work/nar/extensions/nifi-iceberg-parquet-writer-nar-2.8.0.nar-unpacked
+	org.apache.nifi.dbcp.DBCPConnectionPool
+		org.apache.nifi:nifi-dbcp-service-nar:2.8.0 || ./work/nar/extensions/nifi-dbcp-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.kafka.service.Kafka3ConnectionService
+		org.apache.nifi:nifi-kafka-3-service-nar:2.8.0 || ./work/nar/extensions/nifi-kafka-3-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.confluent.schemaregistry.ConfluentProtobufMessageNameResolver
+		org.apache.nifi:nifi-confluent-platform-nar:2.8.0 || ./work/nar/extensions/nifi-confluent-platform-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.CSVRecordLookupService
+		org.apache.nifi:nifi-lookup-services-nar:2.8.0 || ./work/nar/extensions/nifi-lookup-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.elasticsearch.ElasticSearchStringLookupService
+		org.apache.nifi:nifi-elasticsearch-client-service-nar:2.8.0 || ./work/nar/extensions/nifi-elasticsearch-client-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.windowsevent.WindowsEventLogReader
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.rds.AwsRdsIamDatabasePasswordProvider
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.web.client.provider.service.StandardWebClientServiceProvider
+		org.apache.nifi:nifi-web-client-provider-service-nar:2.8.0 || ./work/nar/extensions/nifi-web-client-provider-service-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.iceberg.catalog.RESTIcebergCatalog
+		org.apache.nifi:nifi-iceberg-rest-catalog-nar:2.8.0 || ./work/nar/extensions/nifi-iceberg-rest-catalog-nar-2.8.0.nar-unpacked
+	org.apache.nifi.redis.service.RedisDistributedMapCacheClientService
+		org.apache.nifi:nifi-redis-nar:2.8.0 || ./work/nar/extensions/nifi-redis-nar-2.8.0.nar-unpacked
+	org.apache.nifi.confluent.schemaregistry.ConfluentEncodedSchemaReferenceReader
+		org.apache.nifi:nifi-confluent-platform-nar:2.8.0 || ./work/nar/extensions/nifi-confluent-platform-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderControllerService
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.json.JsonTreeReader
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.hazelcast.services.cachemanager.EmbeddedHazelcastCacheManager
+		org.apache.nifi:nifi-hazelcast-services-nar:2.8.0 || ./work/nar/extensions/nifi-hazelcast-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.services.smb.SmbjClientProviderService
+		org.apache.nifi:nifi-smb-smbj-client-nar:2.8.0 || ./work/nar/extensions/nifi-smb-smbj-client-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.db.SimpleDatabaseLookupService
+		org.apache.nifi:nifi-lookup-services-nar:2.8.0 || ./work/nar/extensions/nifi-lookup-services-nar-2.8.0.nar-unpacked
+	org.apache.nifi.lookup.ReaderLookup
+		org.apache.nifi:nifi-record-serialization-services-nar:2.8.0 || ./work/nar/extensions/nifi-record-serialization-services-nar-2.8.0.nar-unpacked
+	=== End ControllerService types ===
+	=== ProvenanceRepository Type ===
+	org.apache.nifi.provenance.WriteAheadProvenanceRepository
+		org.apache.nifi:nifi-provenance-repository-nar:2.8.0 || ./work/nar/extensions/nifi-provenance-repository-nar-2.8.0.nar-unpacked
+	org.apache.nifi.provenance.NoOpProvenanceRepository
+		org.apache.nifi:nifi-provenance-repository-nar:2.8.0 || ./work/nar/extensions/nifi-provenance-repository-nar-2.8.0.nar-unpacked
+	org.apache.nifi.provenance.VolatileProvenanceRepository
+		org.apache.nifi:nifi-provenance-repository-nar:2.8.0 || ./work/nar/extensions/nifi-provenance-repository-nar-2.8.0.nar-unpacked
+	=== End ProvenanceRepository types ===
+	=== UserGroupProvider Type ===
+	org.apache.nifi.authorization.CompositeConfigurableUserGroupProvider
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	org.apache.nifi.authorization.CompositeUserGroupProvider
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	org.apache.nifi.authorization.FileUserGroupProvider
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	org.apache.nifi.ldap.tenants.LdapUserGroupProvider
+		org.apache.nifi:nifi-ldap-iaa-providers-nar:2.8.0 || ./work/nar/extensions/nifi-ldap-iaa-providers-nar-2.8.0.nar-unpacked
+	=== End UserGroupProvider types ===
+	=== Authorizer Type ===
+	org.apache.nifi.authorization.StandardManagedAuthorizer
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	org.apache.nifi.authorization.single.user.SingleUserAuthorizer
+		org.apache.nifi:nifi-single-user-iaa-providers-nar:2.8.0 || ./work/nar/extensions/nifi-single-user-iaa-providers-nar-2.8.0.nar-unpacked
+	=== End Authorizer types ===
+	=== LeaderElectionManager Type ===
+	org.apache.nifi.framework.cluster.leader.zookeeper.CuratorLeaderElectionManager
+		org.apache.nifi:nifi-framework-zookeeper-nar:2.8.0 || ./work/nar/extensions/nifi-framework-zookeeper-nar-2.8.0.nar-unpacked
+	org.apache.nifi.kubernetes.leader.election.KubernetesLeaderElectionManager
+		org.apache.nifi:nifi-framework-kubernetes-nar:2.8.0 || ./work/nar/extensions/nifi-framework-kubernetes-nar-2.8.0.nar-unpacked
+	=== End LeaderElectionManager types ===
+	=== ParameterProvider Type ===
+	org.apache.nifi.parameter.EnvironmentVariableParameterProvider
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.parameter.gcp.GcpSecretManagerParameterProvider
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.parameter.aws.AwsSecretsManagerParameterProvider
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.parameter.KubernetesSecretParameterProvider
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.parameter.azure.AzureKeyVaultSecretsParameterProvider
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.parameter.OnePasswordParameterProvider
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.parameter.DatabaseParameterProvider
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.vault.hashicorp.HashiCorpVaultParameterProvider
+		org.apache.nifi:nifi-hashicorp-vault-nar:2.8.0 || ./work/nar/extensions/nifi-hashicorp-vault-nar-2.8.0.nar-unpacked
+	=== End ParameterProvider types ===
+	=== StatusAnalyticsModel Type ===
+	org.apache.nifi.controller.status.analytics.models.SimpleRegression
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	org.apache.nifi.controller.status.analytics.models.OrdinaryLeastSquares
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	=== End StatusAnalyticsModel types ===
+	=== NarPersistenceProvider Type ===
+	org.apache.nifi.nar.StandardNarPersistenceProvider
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	=== End NarPersistenceProvider types ===
+	=== Processor Type ===
+	org.apache.nifi.processors.zendesk.GetZendesk
+		org.apache.nifi:nifi-zendesk-nar:2.8.0 || ./work/nar/extensions/nifi-zendesk-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.storage.PutGCSObject
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.data.explorer.QueryAzureDataExplorer
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.UnpackContent
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ReplaceText
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.PutEmail
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.s3.TagS3Object
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.IdentifyMimeType
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.QueryRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.FetchBoxFile
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.PackageFlowFile
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.PutFTP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.PutSQL
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.kinesis.firehose.PutKinesisFirehose
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.splunk.QuerySplunkIndexingStatus
+		org.apache.nifi:nifi-splunk-nar:2.8.0 || ./work/nar/extensions/nifi-splunk-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.RenameRecordField
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.InvokeHTTP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.CreateBoxFileMetadataInstance
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.GetBoxGroupMembers
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.ListBoxFileMetadataInstances
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.snmp.processors.ListenTrapSNMP
+		org.apache.nifi:nifi-snmp-nar:2.8.0 || ./work/nar/extensions/nifi-snmp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.pgp.VerifyContentPGP
+		org.apache.nifi:nifi-pgp-nar:2.8.0 || ./work/nar/extensions/nifi-pgp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.mongodb.PutMongo
+		org.apache.nifi:nifi-mongodb-nar:2.8.0 || ./work/nar/extensions/nifi-mongodb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.HandleHttpRequest
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ListFTP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.TailFile
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.storage.ListAzureDataLakeStorage
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ScanAttribute
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.PutBoxFile
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.storage.FetchAzureDataLakeStorage
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ValidateJson
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.MonitorActivity
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.ExtractStructuredBoxFileMetadata
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.sqs.DeleteSQS
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.geohash.GeohashRecord
+		org.apache.nifi:nifi-geohash-nar:2.8.0 || ./work/nar/extensions/nifi-geohash-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.mongodb.RunMongoAggregation
+		org.apache.nifi:nifi-mongodb-nar:2.8.0 || ./work/nar/extensions/nifi-mongodb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.mongodb.PutMongoRecord
+		org.apache.nifi:nifi-mongodb-nar:2.8.0 || ./work/nar/extensions/nifi-mongodb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.bigquery.PutBigQuery
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.email.ExtractEmailHeaders
+		org.apache.nifi:nifi-email-nar:2.8.0 || ./work/nar/extensions/nifi-email-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.LogAttribute
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.ListBoxFileMetadataTemplates
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.elasticsearch.SearchElasticsearch
+		org.apache.nifi:nifi-elasticsearch-restapi-nar:2.8.0 || ./work/nar/extensions/nifi-elasticsearch-restapi-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.UpdateBoxFileMetadataInstance
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.ml.transcribe.GetAwsTranscribeJobStatus
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.QueryDatabaseTable
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.dropbox.ListDropbox
+		org.apache.nifi:nifi-dropbox-processors-nar:2.8.0 || ./work/nar/extensions/nifi-dropbox-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.hubspot.GetHubSpot
+		org.apache.nifi:nifi-hubspot-nar:2.8.0 || ./work/nar/extensions/nifi-hubspot-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.splunk.GetSplunk
+		org.apache.nifi:nifi-splunk-nar:2.8.0 || ./work/nar/extensions/nifi-splunk-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.EncodeContent
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.AttributesToCSV
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.websocket.ConnectWebSocket
+		org.apache.nifi:nifi-websocket-processors-nar:2.8.0 || ./work/nar/extensions/nifi-websocket-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.network.pcap.SplitPCAP
+		org.apache.nifi:nifi-network-processors-nar:2.8.0 || ./work/nar/extensions/nifi-network-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.SegmentContent
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.UpdateDatabaseTable
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.amqp.processors.ConsumeAMQP
+		org.apache.nifi:nifi-amqp-nar:2.8.0 || ./work/nar/extensions/nifi-amqp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ListSFTP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ExecuteProcess
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.s3.GetS3ObjectMetadata
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.groovyx.ExecuteGroovyScript
+		org.apache.nifi:nifi-groovyx-nar:2.8.0 || ./work/nar/extensions/nifi-groovyx-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.opentelemetry.ListenOTLP
+		org.apache.nifi:nifi-opentelemetry-nar:2.8.0 || ./work/nar/extensions/nifi-opentelemetry-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.EvaluateXQuery
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.slack.ConsumeSlack
+		org.apache.nifi:nifi-slack-nar:2.8.0 || ./work/nar/extensions/nifi-slack-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.RemoveRecordField
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.sns.PutSNS
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.storage.PutAzureBlobStorage_v12
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.FetchBoxFileMetadataInstance
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.HandleHttpResponse
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.eventhub.GetAzureEventHub
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.sqs.PutSQS
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.ConsumeBoxEvents
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.attributes.UpdateAttribute
+		org.apache.nifi:nifi-update-attribute-nar:2.8.0 || ./work/nar/extensions/nifi-update-attribute-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ForkEnrichment
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.pgp.SignContentPGP
+		org.apache.nifi:nifi-pgp-nar:2.8.0 || ./work/nar/extensions/nifi-pgp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.elasticsearch.ConsumeElasticsearch
+		org.apache.nifi:nifi-elasticsearch-restapi-nar:2.8.0 || ./work/nar/extensions/nifi-elasticsearch-restapi-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.script.InvokeScriptedProcessor
+		org.apache.nifi:nifi-scripting-nar:2.8.0 || ./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.MergeContent
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.ListBoxFileInfo
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.s3.PutS3Object
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ListFile
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.FetchBoxFileRepresentation
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.SplitJson
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ExtractRecordSchema
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.iceberg.PutIcebergRecord
+		org.apache.nifi:nifi-iceberg-processors-nar:2.8.0 || ./work/nar/extensions/nifi-iceberg-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ForkRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.CountText
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.UpdateGauge
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ListDatabaseTables
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.RetryFlowFile
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.ISPEnrichIP
+		org.apache.nifi:nifi-enrich-nar:2.8.0 || ./work/nar/extensions/nifi-enrich-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ModifyBytes
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.drive.FetchGoogleDrive
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.kafka.processors.ConsumeKafka
+		org.apache.nifi:nifi-kafka-nar:2.8.0 || ./work/nar/extensions/nifi-kafka-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.slack.PublishSlack
+		org.apache.nifi:nifi-slack-nar:2.8.0 || ./work/nar/extensions/nifi-slack-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.vision.GetGcpVisionAnnotateImagesOperationStatus
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ValidateCsv
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.elasticsearch.DeleteByQueryElasticsearch
+		org.apache.nifi:nifi-elasticsearch-restapi-nar:2.8.0 || ./work/nar/extensions/nifi-elasticsearch-restapi-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.splunk.PutSplunkHTTP
+		org.apache.nifi:nifi-splunk-nar:2.8.0 || ./work/nar/extensions/nifi-splunk-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.cloudwatch.PutCloudWatchMetric
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.UpdateRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.network.ParseNetflowv5
+		org.apache.nifi:nifi-network-processors-nar:2.8.0 || ./work/nar/extensions/nifi-network-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.PutDatabaseRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.GeoEnrichIP
+		org.apache.nifi:nifi-enrich-nar:2.8.0 || ./work/nar/extensions/nifi-enrich-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.DetectDuplicate
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.mqtt.PublishMQTT
+		org.apache.nifi:nifi-mqtt-nar:2.8.0 || ./work/nar/extensions/nifi-mqtt-nar-2.8.0.nar-unpacked
+	org.apache.nifi.amqp.processors.PublishAMQP
+		org.apache.nifi:nifi-amqp-nar:2.8.0 || ./work/nar/extensions/nifi-amqp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ScanContent
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.FetchFTP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.script.ScriptedValidateRecord
+		org.apache.nifi:nifi-scripting-nar:2.8.0 || ./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.SplitText
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.ConsumeBoxEnterpriseEvents
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.dropbox.FetchDropbox
+		org.apache.nifi:nifi-dropbox-processors-nar:2.8.0 || ./work/nar/extensions/nifi-dropbox-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.jslt.JSLTTransformJSON
+		org.apache.nifi:nifi-jslt-nar:2.8.0 || ./work/nar/extensions/nifi-jslt-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.compress.ModifyCompression
+		org.apache.nifi:nifi-compress-nar:2.8.0 || ./work/nar/extensions/nifi-compress-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.GetSFTP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.jms.processors.ConsumeJMS
+		org.apache.nifi:nifi-jms-processors-nar:2.8.0 || ./work/nar/extensions/nifi-jms-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ExtractGrok
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.elasticsearch.JsonQueryElasticsearch
+		org.apache.nifi:nifi-elasticsearch-restapi-nar:2.8.0 || ./work/nar/extensions/nifi-elasticsearch-restapi-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.email.ConsumeIMAP
+		org.apache.nifi:nifi-email-nar:2.8.0 || ./work/nar/extensions/nifi-email-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.salesforce.QuerySalesforceObject
+		org.apache.nifi:nifi-salesforce-nar:2.8.0 || ./work/nar/extensions/nifi-salesforce-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.script.ScriptedTransformRecord
+		org.apache.nifi:nifi-scripting-nar:2.8.0 || ./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.storage.FetchAzureBlobStorage_v12
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.storage.PutAzureDataLakeStorage
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.storage.ListGCSBucket
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.smb.ListSmb
+		org.apache.nifi:nifi-smb-nar:2.8.0 || ./work/nar/extensions/nifi-smb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.dynamodb.GetDynamoDB
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.LogMessage
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.JoinEnrichment
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.dropbox.PutDropbox
+		org.apache.nifi:nifi-dropbox-processors-nar:2.8.0 || ./work/nar/extensions/nifi-dropbox-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.ml.polly.StartAwsPollyJob
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.hl7.ExtractHL7Attributes
+		org.apache.nifi:nifi-hl7-nar:2.8.0 || ./work/nar/extensions/nifi-hl7-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.DeleteBoxFileMetadataInstance
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.ml.textract.GetAwsTextractJobStatus
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.cosmos.document.PutAzureCosmosDBRecord
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.redis.processor.PutRedisHashRecord
+		org.apache.nifi:nifi-redis-nar:2.8.0 || ./work/nar/extensions/nifi-redis-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.FetchDistributedMapCache
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ListenFTP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.jms.processors.PublishJMS
+		org.apache.nifi:nifi-jms-processors-nar:2.8.0 || ./work/nar/extensions/nifi-jms-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.AttributesToJSON
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.drive.PutGoogleDrive
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.CalculateRecordStats
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.DeduplicateRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.evtx.ParseEvtx
+		org.apache.nifi:nifi-evtx-nar:2.8.0 || ./work/nar/extensions/nifi-evtx-nar-2.8.0.nar-unpacked
+	org.apache.nifi.kafka.processors.PublishKafka
+		org.apache.nifi:nifi-kafka-nar:2.8.0 || ./work/nar/extensions/nifi-kafka-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.lambda.PutLambda
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.EvaluateXPath
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.hl7.RouteHL7
+		org.apache.nifi:nifi-hl7-nar:2.8.0 || ./work/nar/extensions/nifi-hl7-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.cipher.VerifyContentMAC
+		org.apache.nifi:nifi-cipher-nar:2.8.0 || ./work/nar/extensions/nifi-cipher-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.SplitXml
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.ml.polly.GetAwsPollyJobStatus
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow
+		org.apache.nifi:nifi-stateful-analysis-nar:2.8.0 || ./work/nar/extensions/nifi-stateful-analysis-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.pubsub.PublishGCPubSub
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.pubsub.ConsumeGCPubSub
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.GetFile
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.GenerateFlowFile
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.pgp.DecryptContentPGP
+		org.apache.nifi:nifi-pgp-nar:2.8.0 || ./work/nar/extensions/nifi-pgp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.smb.GetSmbFile
+		org.apache.nifi:nifi-smb-nar:2.8.0 || ./work/nar/extensions/nifi-smb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.UpdateCounter
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.snmp.processors.SetSNMP
+		org.apache.nifi:nifi-snmp-nar:2.8.0 || ./work/nar/extensions/nifi-snmp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.ListBoxFile
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.drive.ListGoogleDrive
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.email.ConsumePOP3
+		org.apache.nifi:nifi-email-nar:2.8.0 || ./work/nar/extensions/nifi-email-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.elasticsearch.PutElasticsearchRecord
+		org.apache.nifi:nifi-elasticsearch-restapi-nar:2.8.0 || ./work/nar/extensions/nifi-elasticsearch-restapi-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.script.ExecuteScript
+		org.apache.nifi:nifi-scripting-nar:2.8.0 || ./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.smb.FetchSmb
+		org.apache.nifi:nifi-smb-nar:2.8.0 || ./work/nar/extensions/nifi-smb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.mongodb.DeleteMongo
+		org.apache.nifi:nifi-mongodb-nar:2.8.0 || ./work/nar/extensions/nifi-mongodb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.storage.queue.PutAzureQueueStorage_v12
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.GetBoxFileCollaborators
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ReplaceTextWithMapping
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ParseSyslog
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.EnforceOrder
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.PutRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.SampleRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.PutSyslog
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.excel.SplitExcel
+		org.apache.nifi:nifi-poi-nar:2.8.0 || ./work/nar/extensions/nifi-poi-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.email.ExtractEmailAttachments
+		org.apache.nifi:nifi-email-nar:2.8.0 || ./work/nar/extensions/nifi-email-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.mongodb.GetMongo
+		org.apache.nifi:nifi-mongodb-nar:2.8.0 || ./work/nar/extensions/nifi-mongodb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.LookupAttribute
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.FilterAttribute
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ListenHTTP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.websocket.PutWebSocket
+		org.apache.nifi:nifi-websocket-processors-nar:2.8.0 || ./work/nar/extensions/nifi-websocket-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.s3.CopyS3Object
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.PutDistributedMapCache
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ExecuteSQL
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.CompressContent
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.script.ScriptedPartitionRecord
+		org.apache.nifi:nifi-scripting-nar:2.8.0 || ./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.zendesk.PutZendeskTicket
+		org.apache.nifi:nifi-zendesk-nar:2.8.0 || ./work/nar/extensions/nifi-zendesk-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ValidateRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.twitter.ConsumeTwitter
+		org.apache.nifi:nifi-social-media-nar:2.8.0 || ./work/nar/extensions/nifi-social-media-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.shopify.GetShopify
+		org.apache.nifi:nifi-shopify-nar:2.8.0 || ./work/nar/extensions/nifi-shopify-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.vision.StartGcpVisionAnnotateFilesOperation
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.smb.PutSmbFile
+		org.apache.nifi:nifi-smb-nar:2.8.0 || ./work/nar/extensions/nifi-smb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.GetFTP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.websocket.ListenWebSocket
+		org.apache.nifi:nifi-websocket-processors-nar:2.8.0 || ./work/nar/extensions/nifi-websocket-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.ml.textract.StartAwsTextractJob
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.salesforce.PutSalesforceObject
+		org.apache.nifi:nifi-salesforce-nar:2.8.0 || ./work/nar/extensions/nifi-salesforce-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.vision.GetGcpVisionAnnotateFilesOperationStatus
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.storage.CopyAzureBlobStorage_v12
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.PutUDP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.mongodb.gridfs.DeleteGridFS
+		org.apache.nifi:nifi-mongodb-nar:2.8.0 || ./work/nar/extensions/nifi-mongodb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.dynamodb.DeleteDynamoDB
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.GenerateRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ConvertCharacterSet
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.dynamodb.PutDynamoDBRecord
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.Wait
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.cipher.EncryptContentAge
+		org.apache.nifi:nifi-cipher-nar:2.8.0 || ./work/nar/extensions/nifi-cipher-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.mongodb.GetMongoRecord
+		org.apache.nifi:nifi-mongodb-nar:2.8.0 || ./work/nar/extensions/nifi-mongodb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.RouteOnAttribute
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.mongodb.gridfs.PutGridFS
+		org.apache.nifi:nifi-mongodb-nar:2.8.0 || ./work/nar/extensions/nifi-mongodb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.GetFileResource
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.elasticsearch.PaginatedJsonQueryElasticsearch
+		org.apache.nifi:nifi-elasticsearch-restapi-nar:2.8.0 || ./work/nar/extensions/nifi-elasticsearch-restapi-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.storage.DeleteAzureDataLakeStorage
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.mongodb.gridfs.FetchGridFS
+		org.apache.nifi:nifi-mongodb-nar:2.8.0 || ./work/nar/extensions/nifi-mongodb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ListenTCP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ExtractText
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.airtable.QueryAirtableTable
+		org.apache.nifi:nifi-airtable-nar:2.8.0 || ./work/nar/extensions/nifi-airtable-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.data.explorer.PutAzureDataExplorer
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.storage.FetchGCSObject
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.elasticsearch.UpdateByQueryElasticsearch
+		org.apache.nifi:nifi-elasticsearch-restapi-nar:2.8.0 || ./work/nar/extensions/nifi-elasticsearch-restapi-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ParseSyslog5424
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ValidateXml
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.PutFile
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.QueryDatabaseTableRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.workday.GetWorkdayReport
+		org.apache.nifi:nifi-workday-processors-nar:2.8.0 || ./work/nar/extensions/nifi-workday-processors-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.eventhub.ConsumeAzureEventHub
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.s3.ListS3
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.EvaluateJsonPath
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.ml.transcribe.StartAwsTranscribeJob
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.TransformXml
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.RouteOnContent
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.SplitContent
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.FlattenJson
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.sqs.GetSQS
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.elasticsearch.PutElasticsearchJson
+		org.apache.nifi:nifi-elasticsearch-restapi-nar:2.8.0 || ./work/nar/extensions/nifi-elasticsearch-restapi-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.slack.ListenSlack
+		org.apache.nifi:nifi-slack-nar:2.8.0 || ./work/nar/extensions/nifi-slack-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.GenerateTableFetch
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.DebugFlow
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.ml.translate.StartAwsTranslateJob
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.pgp.EncryptContentPGP
+		org.apache.nifi:nifi-pgp-nar:2.8.0 || ./work/nar/extensions/nifi-pgp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.jolt.JoltTransformRecord
+		org.apache.nifi:nifi-jolt-nar:2.8.0 || ./work/nar/extensions/nifi-jolt-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.RouteText
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.kinesis.stream.PutKinesisStream
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.snmp.processors.SendTrapSNMP
+		org.apache.nifi:nifi-snmp-nar:2.8.0 || ./work/nar/extensions/nifi-snmp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.PutTCP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.windows.event.log.ConsumeWindowsEventLog
+		org.apache.nifi:nifi-windows-event-log-nar:2.8.0 || ./work/nar/extensions/nifi-windows-event-log-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.elasticsearch.GetElasticsearch
+		org.apache.nifi:nifi-elasticsearch-restapi-nar:2.8.0 || ./work/nar/extensions/nifi-elasticsearch-restapi-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.storage.MoveAzureDataLakeStorage
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ConvertRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ExecuteStreamCommand
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.DistributeLoad
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.SplitRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.kinesis.ConsumeKinesis
+		org.apache.nifi:nifi-aws-kinesis-nar:2.8.0 || ./work/nar/extensions/nifi-aws-kinesis-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.splunk.PutSplunk
+		org.apache.nifi:nifi-splunk-nar:2.8.0 || ./work/nar/extensions/nifi-splunk-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.cipher.DecryptContentAge
+		org.apache.nifi:nifi-cipher-nar:2.8.0 || ./work/nar/extensions/nifi-cipher-nar-2.8.0.nar-unpacked
+	org.apache.nifi.snmp.processors.GetSNMP
+		org.apache.nifi:nifi-snmp-nar:2.8.0 || ./work/nar/extensions/nifi-snmp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.GeoEnrichIPRecord
+		org.apache.nifi:nifi-enrich-nar:2.8.0 || ./work/nar/extensions/nifi-enrich-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.mqtt.ConsumeMQTT
+		org.apache.nifi:nifi-mqtt-nar:2.8.0 || ./work/nar/extensions/nifi-mqtt-nar-2.8.0.nar-unpacked
+	org.apache.nifi.cdc.mysql.processors.CaptureChangeMySQL
+		org.apache.nifi:nifi-cdc-mysql-nar:2.8.0 || ./work/nar/extensions/nifi-cdc-mysql-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.CryptographicHashContent
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.jolt.JoltTransformJSON
+		org.apache.nifi:nifi-jolt-nar:2.8.0 || ./work/nar/extensions/nifi-jolt-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.storage.DeleteGCSObject
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.PutSFTP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.dynamodb.PutDynamoDB
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.script.ScriptedFilterRecord
+		org.apache.nifi:nifi-scripting-nar:2.8.0 || ./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.Notify
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.PartitionRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ExecuteSQLRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ListenUDPRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.DeleteSFTP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.DuplicateFlowFile
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.gcp.vision.StartGcpVisionAnnotateImagesOperation
+		org.apache.nifi:nifi-gcp-nar:2.8.0 || ./work/nar/extensions/nifi-gcp-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.FetchBoxFileInfo
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.FetchFile
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.DeleteFile
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.s3.DeleteS3Object
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.LookupRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.avro.SplitAvro
+		org.apache.nifi:nifi-avro-nar:2.8.0 || ./work/nar/extensions/nifi-avro-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.storage.ListAzureBlobStorage_v12
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ListenUDP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.s3.FetchS3Object
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.MergeRecord
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.storage.queue.GetAzureQueueStorage_v12
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.FetchSFTP
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.box.CreateBoxMetadataTemplate
+		org.apache.nifi:nifi-box-nar:2.8.0 || ./work/nar/extensions/nifi-box-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.avro.ExtractAvroMetadata
+		org.apache.nifi:nifi-avro-nar:2.8.0 || ./work/nar/extensions/nifi-avro-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.storage.DeleteAzureBlobStorage_v12
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.mongodb.PutMongoBulkOperations
+		org.apache.nifi:nifi-mongodb-nar:2.8.0 || ./work/nar/extensions/nifi-mongodb-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ListenSyslog
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.ml.translate.GetAwsTranslateJobStatus
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.standard.ControlRate
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.azure.eventhub.PutAzureEventHub
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.s3.GetS3ObjectTags
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	org.apache.nifi.processors.aws.kinesis.stream.ConsumeKinesisStream
+		org.apache.nifi:nifi-aws-nar:2.8.0 || ./work/nar/extensions/nifi-aws-nar-2.8.0.nar-unpacked
+	=== End Processor types ===
+	=== FlowFilePrioritizer Type ===
+	org.apache.nifi.prioritizer.NewestFlowFileFirstPrioritizer
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	org.apache.nifi.prioritizer.OldestFlowFileFirstPrioritizer
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	org.apache.nifi.prioritizer.PriorityAttributePrioritizer
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	org.apache.nifi.prioritizer.FirstInFirstOutPrioritizer
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	=== End FlowFilePrioritizer types ===
+	=== FlowActionReporter Type ===
+	=== End FlowActionReporter types ===
+	=== ReportingTask Type ===
+	org.apache.nifi.reporting.SiteToSiteBulletinReportingTask
+		org.apache.nifi:nifi-site-to-site-reporting-nar:2.8.0 || ./work/nar/extensions/nifi-site-to-site-reporting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.reporting.SiteToSiteStatusReportingTask
+		org.apache.nifi:nifi-site-to-site-reporting-nar:2.8.0 || ./work/nar/extensions/nifi-site-to-site-reporting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.reporting.SiteToSiteProvenanceReportingTask
+		org.apache.nifi:nifi-site-to-site-reporting-nar:2.8.0 || ./work/nar/extensions/nifi-site-to-site-reporting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.reporting.azure.loganalytics.AzureLogAnalyticsProvenanceReportingTask
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.reporting.azure.loganalytics.AzureLogAnalyticsReportingTask
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.reporting.SiteToSiteMetricsReportingTask
+		org.apache.nifi:nifi-site-to-site-reporting-nar:2.8.0 || ./work/nar/extensions/nifi-site-to-site-reporting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.controller.ControllerStatusReportingTask
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.controller.MonitorDiskUsage
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.reporting.script.ScriptedReportingTask
+		org.apache.nifi:nifi-scripting-nar:2.8.0 || ./work/nar/extensions/nifi-scripting-nar-2.8.0.nar-unpacked
+	org.apache.nifi.controller.MonitorMemory
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	=== End ReportingTask types ===
+	=== FlowFileRepository Type ===
+	org.apache.nifi.controller.repository.WriteAheadFlowFileRepository
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	org.apache.nifi.controller.repository.VolatileFlowFileRepository
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	=== End FlowFileRepository types ===
+	=== FlowFileSwapManager Type ===
+	org.apache.nifi.controller.FileSystemSwapManager
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	=== End FlowFileSwapManager types ===
+	=== PythonBridge Type ===
+	org.apache.nifi.py4j.StandardPythonBridge
+		org.apache.nifi:nifi-py4j-nar:2.8.0 || ./work/nar/extensions/nifi-py4j-nar-2.8.0.nar-unpacked
+	=== End PythonBridge types ===
+	=== AccessPolicyProvider Type ===
+	org.apache.nifi.authorization.FileAccessPolicyProvider
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	=== End AccessPolicyProvider types ===
+	=== ExternalResourceProvider Type ===
+	org.apache.nifi.registry.extension.NiFiRegistryExternalResourceProvider
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	=== End ExternalResourceProvider types ===
+	=== StatusHistoryRepository Type ===
+	org.apache.nifi.controller.status.history.VolatileComponentStatusRepository
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	=== End StatusHistoryRepository types ===
+	=== FlowRegistryClient Type ===
+	org.apache.nifi.azure.devops.AzureDevOpsFlowRegistryClient
+		org.apache.nifi:nifi-azure-nar:2.8.0 || ./work/nar/extensions/nifi-azure-nar-2.8.0.nar-unpacked
+	org.apache.nifi.registry.flow.NifiRegistryFlowRegistryClient
+		org.apache.nifi:nifi-flow-registry-client-nar:2.8.0 || ./work/nar/extensions/nifi-flow-registry-client-nar-2.8.0.nar-unpacked
+	org.apache.nifi.gitlab.GitLabFlowRegistryClient
+		org.apache.nifi:nifi-gitlab-nar:2.8.0 || ./work/nar/extensions/nifi-gitlab-nar-2.8.0.nar-unpacked
+	org.apache.nifi.atlassian.bitbucket.BitbucketFlowRegistryClient
+		org.apache.nifi:nifi-atlassian-nar:2.8.0 || ./work/nar/extensions/nifi-atlassian-nar-2.8.0.nar-unpacked
+	org.apache.nifi.github.GitHubFlowRegistryClient
+		org.apache.nifi:nifi-github-nar:2.8.0 || ./work/nar/extensions/nifi-github-nar-2.8.0.nar-unpacked
+	=== End FlowRegistryClient types ===
+	=== FlowAnalysisRule Type ===
+	org.apache.nifi.flowanalysis.rules.RestrictFlowFileExpiration
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.flowanalysis.rules.DisallowComponentType
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.flowanalysis.rules.RequireServerSSLContextService
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	org.apache.nifi.flowanalysis.rules.RestrictBackpressureSettings
+		org.apache.nifi:nifi-standard-nar:2.8.0 || ./work/nar/extensions/nifi-standard-nar-2.8.0.nar-unpacked
+	=== End FlowAnalysisRule types ===
+	=== StateProvider Type ===
+	org.apache.nifi.controller.state.providers.zookeeper.ZooKeeperStateProvider
+		org.apache.nifi:nifi-framework-zookeeper-nar:2.8.0 || ./work/nar/extensions/nifi-framework-zookeeper-nar-2.8.0.nar-unpacked
+	org.apache.nifi.controller.state.providers.zookeeper.server.ZooKeeperStateProviderServer
+		org.apache.nifi:nifi-framework-zookeeper-nar:2.8.0 || ./work/nar/extensions/nifi-framework-zookeeper-nar-2.8.0.nar-unpacked
+	org.apache.nifi.controller.state.providers.local.WriteAheadLocalStateProvider
+		org.apache.nifi:nifi-framework-nar:2.8.0 || ./work/nar/framework/nifi-framework-nar-2.8.0.nar-unpacked
+	org.apache.nifi.redis.state.RedisStateProvider
+		org.apache.nifi:nifi-redis-nar:2.8.0 || ./work/nar/extensions/nifi-redis-nar-2.8.0.nar-unpacked
+	org.apache.nifi.kubernetes.state.provider.KubernetesConfigMapStateProvider
+		org.apache.nifi:nifi-framework-kubernetes-nar:2.8.0 || ./work/nar/extensions/nifi-framework-kubernetes-nar-2.8.0.nar-unpacked
+	=== End StateProvider types ===
+	=== ComponentMetricReporter Type ===
+	=== End ComponentMetricReporter types ===
+2026-02-27 16:58:53,363 INFO [main] o.a.n.f.r.CompositeExternalResourceProviderService Starting External Resource Provider Service ...
+2026-02-27 16:58:53,363 INFO [main] o.a.n.f.r.CompositeExternalResourceProviderService External Resource Provider Service is started successfully
+2026-02-27 16:58:53,365 INFO [main] org.apache.nifi.nar.NarAutoLoader Found 0 initial NARs from directory nar_extensions
+2026-02-27 16:58:53,370 INFO [main] org.apache.nifi.nar.NarAutoLoader Starting NAR Auto-Loader Thread for directory /opt/nifi/nifi-current/nar_extensions ...
+2026-02-27 16:58:53,372 INFO [main] org.eclipse.jetty.server.Server jetty-12.1.6; built: 2026-01-27T18:53:19.182Z; git: 88ca559572b1c8858b3c5684bb0293fa64e5e90f; jvm 21.0.10+10-LTS
+2026-02-27 16:58:53,902 INFO [main] o.e.j.session.DefaultSessionIdManager Session workerName=node0
+2026-02-27 16:58:53,908 INFO [main] o.e.jetty.server.handler.ContextHandler Started oeje11w.WebAppContext@6bf0f70a{/nifi-standard-content-viewer-2.8.0,/nifi-standard-content-viewer-2.8.0,b=file:///opt/nifi/nifi-current/work/jetty/nifi-standard-content-viewer-2.8.0.war/webapp/,a=AVAILABLE,h=oeje11s.SessionHandler@45849604{STARTED}}{./work/nar/extensions/nifi-standard-content-viewer-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-standard-content-viewer-2.8.0.war}
+2026-02-27 16:58:53,913 INFO [main] o.a.n.w.c.v.StandardServletContextListener Standard Content Viewer Initialized
+2026-02-27 16:58:53,938 INFO [main] o.e.j.ee11.servlet.ServletContextHandler Started oeje11w.WebAppContext@6bf0f70a{/nifi-standard-content-viewer-2.8.0,/nifi-standard-content-viewer-2.8.0,b=file:///opt/nifi/nifi-current/work/jetty/nifi-standard-content-viewer-2.8.0.war/webapp/,a=AVAILABLE,h=oeje11s.SessionHandler@45849604{STARTED}}{./work/nar/extensions/nifi-standard-content-viewer-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-standard-content-viewer-2.8.0.war}
+2026-02-27 16:58:54,348 INFO [main] o.e.jetty.server.handler.ContextHandler Started oeje11w.WebAppContext@627d35ff{/nifi-update-attribute-ui-2.8.0,/nifi-update-attribute-ui-2.8.0,b=file:///opt/nifi/nifi-current/work/jetty/nifi-update-attribute-ui-2.8.0.war/webapp/,a=AVAILABLE,h=oeje11s.SessionHandler@24b38e8f{STARTED}}{./work/nar/extensions/nifi-update-attribute-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-update-attribute-ui-2.8.0.war}
+2026-02-27 16:58:54,350 INFO [main] o.e.j.ee11.servlet.ServletContextHandler Started oeje11w.WebAppContext@627d35ff{/nifi-update-attribute-ui-2.8.0,/nifi-update-attribute-ui-2.8.0,b=file:///opt/nifi/nifi-current/work/jetty/nifi-update-attribute-ui-2.8.0.war/webapp/,a=AVAILABLE,h=oeje11s.SessionHandler@24b38e8f{STARTED}}{./work/nar/extensions/nifi-update-attribute-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-update-attribute-ui-2.8.0.war}
+2026-02-27 16:58:54,594 INFO [main] o.e.jetty.server.handler.ContextHandler Started oeje11w.WebAppContext@25c6ab3f{/nifi-jolt-transform-json-ui-2.8.0,/nifi-jolt-transform-json-ui-2.8.0,b=file:///opt/nifi/nifi-current/work/jetty/nifi-jolt-transform-json-ui-2.8.0.war/webapp/,a=AVAILABLE,h=oeje11s.SessionHandler@50ef2906{STARTED}}{./work/nar/extensions/nifi-jolt-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-jolt-transform-json-ui-2.8.0.war}
+2026-02-27 16:58:54,600 INFO [main] o.e.j.ee11.servlet.ServletContextHandler Started oeje11w.WebAppContext@25c6ab3f{/nifi-jolt-transform-json-ui-2.8.0,/nifi-jolt-transform-json-ui-2.8.0,b=file:///opt/nifi/nifi-current/work/jetty/nifi-jolt-transform-json-ui-2.8.0.war/webapp/,a=AVAILABLE,h=oeje11s.SessionHandler@50ef2906{STARTED}}{./work/nar/extensions/nifi-jolt-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-jolt-transform-json-ui-2.8.0.war}
+2026-02-27 16:58:54,834 INFO [main] o.e.j.s.handler.ContextHandler._nifi_api No Spring WebApplicationInitializer types detected on classpath
+2026-02-27 16:58:54,880 INFO [main] o.e.jetty.server.handler.ContextHandler Started oeje11w.WebAppContext@19fc0ef7{nifi-api,/nifi-api,b=file:///opt/nifi/nifi-current/work/jetty/nifi-web-api-2.8.0.war/webapp/,a=AVAILABLE,h=oeje11s.SessionHandler@7865cc83{STARTED}}{./work/nar/extensions/nifi-server-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-web-api-2.8.0.war}
+2026-02-27 16:58:54,880 INFO [main] o.e.j.s.handler.ContextHandler._nifi_api Initializing Spring root WebApplicationContext
+2026-02-27 16:58:55,597 INFO [main] o.a.nifi.properties.NiFiPropertiesLoader Loading Application Properties [/opt/nifi/nifi-current/conf/nifi.properties]
+2026-02-27 16:58:55,681 INFO [main] o.a.n.wali.SequentialAccessWriteAheadLog Recovering records from Write-Ahead Log at ./state/local
+2026-02-27 16:58:55,682 INFO [main] o.a.n.wali.SequentialAccessWriteAheadLog No Snapshot File to recover from at ./state/local. Now recovering records from 0 journal files
+2026-02-27 16:58:55,682 INFO [main] o.a.n.wali.SequentialAccessWriteAheadLog Successfully recovered 0 records in 0 milliseconds. Now checkpointing to ensure that Write-Ahead Log is in a consistent state
+2026-02-27 16:58:55,687 INFO [main] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 0 Records and 0 Swap Files in 4 milliseconds (Stop-the-world time = 2 milliseconds), max Transaction ID -1
+2026-02-27 16:58:56,010 INFO [main] jetbrains.exodus.env.EnvironmentImpl Exodus environment created: ./database_repository
+2026-02-27 16:58:56,098 INFO [main] o.a.n.a.service.EntityStoreAuditService Environment configured with directory [./database_repository]
+2026-02-27 16:58:56,220 WARN [main] org.apache.nifi.util.FlowParser Flow Configuration does not exist or was empty
+2026-02-27 16:58:56,625 INFO [main] o.a.n.c.r.WriteAheadFlowFileRepository Initialized FlowFile Repository
+2026-02-27 16:58:56,627 INFO [main] o.apache.nifi.controller.FlowController Creating Provenance Repository [org.apache.nifi.provenance.WriteAheadProvenanceRepository]
+2026-02-27 16:58:56,648 INFO [main] o.a.n.p.store.WriteAheadStorePartition After recovering ./provenance_repository, next Event ID to be generated will be 0
+2026-02-27 16:58:56,651 INFO [main] o.a.n.p.index.lucene.LuceneEventIndex Will avoid re-indexing Provenance Events because the newest index is defunct, so it will be re-indexed in the background
+2026-02-27 16:58:56,652 INFO [main] o.apache.nifi.controller.FlowController Creating Content Repository [org.apache.nifi.controller.repository.FileSystemRepository]
+2026-02-27 16:58:56,655 INFO [main] o.a.n.c.repository.FileSystemRepository Maximum Threshold for Container default set to 59326175477 bytes; if volume exceeds this size, archived data will be deleted until it no longer exceeds this size
+2026-02-27 16:58:56,656 INFO [main] o.a.n.c.repository.FileSystemRepository Initializing FileSystemRepository with 'Always Sync' set to false
+2026-02-27 16:58:57,421 INFO [main] org.apache.nifi.py4j.PythonProcess Launching Python Process python3 /opt/nifi/nifi-current/./python/framework/Controller.py with working directory ./work/python/controller to communicate with Java on Port 46229
+2026-02-27 16:58:57,502 INFO [python-log-193] org.apache.nifi.py4j.Controller Listening for requests from Java side using Python Port 40841, communicating with Java on port 46229
+2026-02-27 16:58:57,550 INFO [main] org.apache.nifi.py4j.PythonProcess Successfully started and pinged Python Server. Python Process = Process[pid=193, exitValue="not exited"]
+2026-02-27 16:58:57,943 INFO [main] o.a.n.n.NarPersistenceProviderFactoryBean Creating NAR Persistence Provider [org.apache.nifi.nar.StandardNarPersistenceProvider]
+2026-02-27 16:58:57,946 INFO [main] o.a.n.nar.StandardNarPersistenceProvider Loaded persistence info for 0 NARs
+2026-02-27 16:58:57,946 INFO [main] o.a.n.nar.StandardNarPersistenceProvider Initialization completed with storage location [/opt/nifi/nifi-current/./nar_repository]
+2026-02-27 16:58:57,954 INFO [main] org.apache.nifi.nar.StandardNarManager Loading stored NAR files [0]
+2026-02-27 16:58:58,366 INFO [main] o.a.n.a.s.u.SingleUserLoginIdentityProvider 
+
+Generated Username [d8e55157-689a-415b-b732-f173b9dcb46f]
+Generated Password [96l76GmgDUn7L83Qx5fbz5TmWPjWSys5]
+
+2026-02-27 16:58:58,367 INFO [main] o.a.n.a.s.u.SingleUserLoginIdentityProvider Run the following command to change credentials: nifi.sh set-single-user-credentials USERNAME PASSWORD
+2026-02-27 16:58:58,702 INFO [main] o.a.n.a.s.u.SingleUserLoginIdentityProvider Updating Login Identity Providers Configuration [./conf/login-identity-providers.xml]
+2026-02-27 16:58:59,811 INFO [main] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer Found 5 AuthenticationProvider beans, with names [anonymousAuthenticationProvider, jwtAuthenticationProvider, oidcAuthorizationCodeAuthenticationProvider, openSamlAuthenticationProvider, x509AuthenticationProvider]. Global Authentication Manager will not be configured with AuthenticationProviders. Consider publishing a single AuthenticationProvider bean, or wiring your Providers directly using the DSL.
+2026-02-27 16:58:59,987 INFO [main] o.a.n.w.c.ApplicationStartupContextListener Starting Flow Controller...
+2026-02-27 16:58:59,990 INFO [main] o.a.n.c.s.VersionedFlowSynchronizer Synchronizing FlowController with proposed flow: Controller Already Synchronized = false
+2026-02-27 16:58:59,993 INFO [main] o.a.n.c.s.VersionedFlowSynchronizer Successfully synchronized dataflow with the proposed flow in 3 millis
+2026-02-27 16:58:59,993 INFO [main] o.apache.nifi.controller.FlowController Successfully synchronized controller with proposed flow. Flow contains the following number of components: {Processors=0, Controller Services=0, Reporting Tasks=0, Flow Analysis Rules=0, Process Groups=0, Remote Process Groups=0, Parameter Providers=0, Flow Registry Clients=0, Local Input Ports=0, Local Output Ports=0, Public Input Ports=0, Public Output Ports=0}
+2026-02-27 16:59:00,021 INFO [main] o.a.n.wali.SequentialAccessWriteAheadLog Recovering records from Write-Ahead Log at ./flowfile_repository
+2026-02-27 16:59:00,022 INFO [main] o.a.n.wali.SequentialAccessWriteAheadLog No Snapshot File to recover from at ./flowfile_repository. Now recovering records from 0 journal files
+2026-02-27 16:59:00,022 INFO [main] o.a.n.wali.SequentialAccessWriteAheadLog Successfully recovered 0 records in 1 milliseconds. Now checkpointing to ensure that Write-Ahead Log is in a consistent state
+2026-02-27 16:59:00,032 INFO [main] o.a.n.wali.SequentialAccessWriteAheadLog Checkpointed Write-Ahead Log with 0 Records and 0 Swap Files in 9 milliseconds (Stop-the-world time = 7 milliseconds), max Transaction ID -1
+2026-02-27 16:59:00,033 INFO [main] o.a.n.c.r.WriteAheadFlowFileRepository Successfully restored 0 FlowFiles and 0 Swap Files
+2026-02-27 16:59:00,303 INFO [main] o.apache.nifi.controller.FlowController Scheduled Flow Registry synchronization every 30 min
+2026-02-27 16:59:00,306 INFO [main] o.apache.nifi.controller.FlowController Performed initial validation of all components in 0 milliseconds
+2026-02-27 16:59:00,307 INFO [main] o.apache.nifi.controller.FlowController Starting 0 Stateless Process Groups
+2026-02-27 16:59:00,307 INFO [main] o.apache.nifi.controller.FlowController Starting 0 processors/ports/funnels
+2026-02-27 16:59:00,307 INFO [main] o.apache.nifi.controller.FlowController Started 0 Remote Group Ports transmitting
+2026-02-27 16:59:00,307 INFO [main] o.a.n.w.c.ApplicationStartupContextListener Flow Controller started successfully.
+2026-02-27 16:59:01,044 INFO [main] o.e.j.ee11.servlet.ServletContextHandler Started oeje11w.WebAppContext@19fc0ef7{nifi-api,/nifi-api,b=file:///opt/nifi/nifi-current/work/jetty/nifi-web-api-2.8.0.war/webapp/,a=AVAILABLE,h=oeje11s.SessionHandler@7865cc83{STARTED}}{./work/nar/extensions/nifi-server-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-web-api-2.8.0.war}
+2026-02-27 16:59:01,161 INFO [main] o.e.j.s.handler.ContextHandler._nifi No Spring WebApplicationInitializer types detected on classpath
+2026-02-27 16:59:01,180 INFO [main] o.e.jetty.server.handler.ContextHandler Started oeje11w.WebAppContext@62204c5b{/nifi,/nifi,b=file:///opt/nifi/nifi-current/work/jetty/nifi-ui-2.8.0.war/webapp/,a=AVAILABLE,h=oeje11s.SessionHandler@4b28e19b{STARTED}}{./work/nar/extensions/nifi-server-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-ui-2.8.0.war}
+2026-02-27 16:59:01,182 INFO [main] o.e.j.ee11.servlet.ServletContextHandler Started oeje11w.WebAppContext@62204c5b{/nifi,/nifi,b=file:///opt/nifi/nifi-current/work/jetty/nifi-ui-2.8.0.war/webapp/,a=AVAILABLE,h=oeje11s.SessionHandler@4b28e19b{STARTED}}{./work/nar/extensions/nifi-server-nar-2.8.0.nar-unpacked/NAR-INF/bundled-dependencies/nifi-ui-2.8.0.war}
+2026-02-27 16:59:01,187 INFO [main] o.eclipse.jetty.server.AbstractConnector Started oejs.ServerConnector@51e27505{SSL, (ssl, alpn, h2, http/1.1)}{e4ed9c9c33d2:8443}
+2026-02-27 16:59:01,188 INFO [main] org.eclipse.jetty.server.Server Started oejs.Server@5e8f0f98{STARTING}[12.1.6,sto=0] @7816ms
+2026-02-27 16:59:01,189 INFO [main] org.apache.nifi.web.server.JettyServer Started Server on https://e4ed9c9c33d2:8443/nifi
+2026-02-27 16:59:01,197 INFO [main] o.a.n.runtime.StandardManagementServer Started Management Server on http://127.0.0.1:52020
+2026-02-27 16:59:01,199 INFO [main] org.apache.nifi.runtime.Application Started Application in 14.864 seconds (14864950632 ns)
+2026-02-27 16:59:20,038 INFO [Checkpoint FlowFile Repository] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 0 records in 0 milliseconds
+2026-02-27 16:59:40,043 INFO [Checkpoint FlowFile Repository] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 0 records in 0 milliseconds
+2026-02-27 16:59:57,598 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-02-27 16:59:57,599 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 412.95 GB, bytes free = 47.48 GB, capacity = 460.43 GB

@@ -1,0 +1,18 @@
+services:
+  nifi:
+    image: apache/nifi:1.24.0    # Native arm64 support (Apple Silicon compatible)
+    container_name: nifi_1_24_0
+    ports:
+      - "8443:8443"              # NiFi 1.14+ uses HTTPS by default
+    environment:
+      - SINGLE_USER_CREDENTIALS_USERNAME=admin
+      - SINGLE_USER_CREDENTIALS_PASSWORD=adminpassword123
+      - NIFI_JVM_HEAP_INIT=1g
+      - NIFI_JVM_HEAP_MAX=2g
+    volumes:
+      - ./logs:/opt/nifi/nifi-current/logs
+      - ./data/database_repository:/opt/nifi/nifi-current/database_repository
+      - ./data/flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
+      - ./data/content_repository:/opt/nifi/nifi-current/content_repository
+      - ./data/provenance_repository:/opt/nifi/nifi-current/provenance_repository
+    restart: unless-stopped
