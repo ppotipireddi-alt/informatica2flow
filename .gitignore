@@ -8,3 +8,7 @@ wheels/
 
 # Virtual environments
 .venv
+nifi-docker/data
+nifi-docker/logs
+pg_docker/data
+

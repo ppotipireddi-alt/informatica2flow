@@ -2836,3 +2836,70 @@ Caused by: java.lang.ClassNotFoundException: org.postgresql.Driver
 	... 17 common frames omitted
 2026-02-28 07:43:56,499 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
 2026-02-28 07:43:56,500 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 427.92 GB, bytes free = 32.51 GB, capacity = 460.43 GB
+2026-02-28 07:44:02,982 INFO [Write-Ahead Local State Provider Maintenance] org.wali.MinimalLockingWriteAheadLog org.wali.MinimalLockingWriteAheadLog@26772e54 checkpointed with 135 Records and 0 Swap Files in 10 milliseconds (Stop-the-world time = 5 milliseconds, Clear Edit Logs time = 0 millis), max Transaction ID 449
+2026-02-28 07:44:05,583 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-02-28 07:44:05,584 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 0 records in 0 milliseconds
+2026-02-28 07:44:18,559 ERROR [Timer-Driven Process Thread-4] o.a.n.c.s.StandardControllerServiceNode StandardControllerServiceNode[service=DBCPConnectionPool[id=a19ad977-019c-1000-46a3-3b0ee7077b2f], name=DBCPConnectionPool, active=true] Failed to invoke @OnEnabled method
+org.apache.nifi.processor.exception.ProcessException: Driver class org.postgresql.Driver is not found
+	at org.apache.nifi.dbcp.DBCPConnectionPool.getDriver(DBCPConnectionPool.java:296)
+	at org.apache.nifi.dbcp.AbstractDBCPConnectionPool.configureDataSource(AbstractDBCPConnectionPool.java:161)
+	at org.apache.nifi.dbcp.AbstractDBCPConnectionPool.onConfigured(AbstractDBCPConnectionPool.java:143)
+	at jdk.internal.reflect.GeneratedMethodAccessor775.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.nifi.util.ReflectionUtils.invokeMethodsWithAnnotations(ReflectionUtils.java:145)
+	at org.apache.nifi.util.ReflectionUtils.invokeMethodsWithAnnotations(ReflectionUtils.java:133)
+	at org.apache.nifi.util.ReflectionUtils.invokeMethodsWithAnnotations(ReflectionUtils.java:78)
+	at org.apache.nifi.util.ReflectionUtils.invokeMethodsWithAnnotation(ReflectionUtils.java:55)
+	at org.apache.nifi.controller.service.StandardControllerServiceNode$2.run(StandardControllerServiceNode.java:618)
+	at org.apache.nifi.engine.FlowEngine$2.run(FlowEngine.java:110)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: org.postgresql.Driver
+	at java.base/java.net.URLClassLoader.findClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at org.apache.nifi.dbcp.DBCPConnectionPool.getDriver(DBCPConnectionPool.java:294)
+	... 17 common frames omitted
+2026-02-28 07:44:25,584 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-02-28 07:44:25,585 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 0 records in 0 milliseconds
+2026-02-28 07:44:45,586 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-02-28 07:44:45,587 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 0 records in 0 milliseconds
+2026-02-28 07:44:48,568 ERROR [Timer-Driven Process Thread-2] o.a.n.c.s.StandardControllerServiceNode StandardControllerServiceNode[service=DBCPConnectionPool[id=a19ad977-019c-1000-46a3-3b0ee7077b2f], name=DBCPConnectionPool, active=true] Failed to invoke @OnEnabled method
+org.apache.nifi.processor.exception.ProcessException: Driver class org.postgresql.Driver is not found
+	at org.apache.nifi.dbcp.DBCPConnectionPool.getDriver(DBCPConnectionPool.java:296)
+	at org.apache.nifi.dbcp.AbstractDBCPConnectionPool.configureDataSource(AbstractDBCPConnectionPool.java:161)
+	at org.apache.nifi.dbcp.AbstractDBCPConnectionPool.onConfigured(AbstractDBCPConnectionPool.java:143)
+	at jdk.internal.reflect.GeneratedMethodAccessor775.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.nifi.util.ReflectionUtils.invokeMethodsWithAnnotations(ReflectionUtils.java:145)
+	at org.apache.nifi.util.ReflectionUtils.invokeMethodsWithAnnotations(ReflectionUtils.java:133)
+	at org.apache.nifi.util.ReflectionUtils.invokeMethodsWithAnnotations(ReflectionUtils.java:78)
+	at org.apache.nifi.util.ReflectionUtils.invokeMethodsWithAnnotation(ReflectionUtils.java:55)
+	at org.apache.nifi.controller.service.StandardControllerServiceNode$2.run(StandardControllerServiceNode.java:618)
+	at org.apache.nifi.engine.FlowEngine$2.run(FlowEngine.java:110)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: org.postgresql.Driver
+	at java.base/java.net.URLClassLoader.findClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at org.apache.nifi.dbcp.DBCPConnectionPool.getDriver(DBCPConnectionPool.java:294)
+	... 17 common frames omitted
+2026-02-28 07:44:56,755 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Successfully deleted 0 files (0 bytes) from archive
+2026-02-28 07:44:56,756 INFO [Cleanup Archive for default] o.a.n.c.repository.FileSystemRepository Archive cleanup completed for container default; will now allow writing to this container. Bytes used = 428.93 GB, bytes free = 31.5 GB, capacity = 460.43 GB
+2026-02-28 07:45:05,588 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Initiating checkpoint of FlowFile Repository
+2026-02-28 07:45:05,589 INFO [pool-7-thread-1] o.a.n.c.r.WriteAheadFlowFileRepository Successfully checkpointed FlowFile Repository with 0 records in 0 milliseconds
