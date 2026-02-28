@@ -12,3 +12,4 @@ nifi-docker/data
 nifi-docker/logs
 pg_docker/data
 
+.env
