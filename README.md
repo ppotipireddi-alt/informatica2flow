@@ -104,6 +104,22 @@ uv run python main.py --mode migrate --xml input_data/WF_POL_WKD_FILE_COSTCENTER
 uv run python main.py --mode migrate --xml input_data/WF_POL_WKD_FILE_COSTCENTER_LOW.xml
 ```
 
+### Apply human review corrections
+
+After editing the review JSON in `review_queue/`:
+
+```bash
+# Regenerate flow only (no deploy)
+uv run python main.py --mode apply-review \
+  --review review_queue/M_POL_WKD_FILE_COSTCENTER_review.json \
+  --xml input_data/WF_POL_WKD_FILE_COSTCENTER_LOW.xml --no-deploy
+
+# Regenerate + deploy to NiFi
+uv run python main.py --mode apply-review \
+  --review review_queue/M_POL_WKD_FILE_COSTCENTER_review.json \
+  --xml input_data/WF_POL_WKD_FILE_COSTCENTER_LOW.xml
+```
+
 ### Deploy to NiFi (standalone)
 
 ```bash
@@ -161,27 +177,112 @@ Exposes tools for AI agent integration: `parse_informatica`, `detect_spark`, `tr
 ### Output
 
 - `output_data/<mapping>_nifi_flow.json` — NiFi flow definition
-- `review_queue/` — Items requiring human review (Spark components, low-confidence translations)
+- `review_queue/<mapping>_review.json` — Expressions requiring human review (low confidence or Spark)
+
+---
+
+## Human-in-the-Loop Learning Cycle
+
+The system improves over time. Low-confidence translations are written to `review_queue/` for human correction. Once corrected, those fixes are stored as deterministic rules in the rule memory database and reused automatically on future migrations — no LLM call needed.
+
+### Cycle overview
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  1. migrate --no-deploy                                         │
+│     └─▶ confidence < 0.75 ──▶ review_queue/*_review.json       │
+│                                                                 │
+│  2. Human opens review JSON, fixes "translated" fields          │
+│                                                                 │
+│  3. apply-review                                                │
+│     └─▶ injects corrections into parsed ports                  │
+│     └─▶ persists rules to PostgreSQL (deterministic_rules)      │
+│     └─▶ regenerates + optionally deploys NiFi flow             │
+│                                                                 │
+│  4. Next migrate run                                            │
+│     └─▶ rule memory hit (confidence 0.9) ──▶ no LLM call       │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Step 1 — Run migration and identify items for review
+
+```bash
+uv run python main.py --mode migrate \
+  --xml input_data/WF_POL_WKD_FILE_COSTCENTER_LOW.xml --no-deploy
+```
+
+Outputs `review_queue/M_POL_WKD_FILE_COSTCENTER_review.json` when overall confidence < 75%.
+
+### Step 2 — Open the review JSON and edit corrections
+
+The review file contains one entry per translated expression. Edit the `"translated"` field for any incorrect translation:
+
+```json
+{
+  "transformation": "EXP_FILES",
+  "port": "BUS_AREA_HPx",
+  "original": "BUS_AREA || '-' || 'HPE'",
+  "translated": "CONCAT(BUS_AREA, '-HPE')",
+  "confidence": 0.88,
+  "method": "regex"
+}
+```
+
+Focus on entries with **confidence ≤ 0.30** — these are flagged as unreliable.
+
+### Step 3 — Apply the corrections
+
+```bash
+uv run python main.py --mode apply-review \
+  --review review_queue/M_POL_WKD_FILE_COSTCENTER_review.json \
+  --xml input_data/WF_POL_WKD_FILE_COSTCENTER_LOW.xml --no-deploy
+```
+
+Output:
+```
+✏️  Applied 29 human correction(s)
+📚 Persisted 12 rule(s) to rule memory — won't need LLM next time
+✅ Flow regenerated: output_data/M_POL_WKD_FILE_COSTCENTER_nifi_flow.json
+```
+
+### What gets persisted
+
+For each corrected expression (human-changed value **or** confidence < 0.75), two rows are written:
+
+| Table | Content |
+|---|---|
+| `human_feedback` | Full audit trail — original, LLM output, corrected value, reason |
+| `deterministic_rules` | `(inf_pattern → nifi_replacement)` at confidence **0.9**, `approved=TRUE` |
+
+### Step 4 — Future migrations use learned rules
+
+Next time the same Informatica expression appears in any mapping:
+1. Expression translator checks `deterministic_rules` first
+2. Finds the human-approved rule → returns at **0.9 confidence** immediately
+3. LLM is never called for that expression again
+
+Over time the rule memory grows and LLM usage drops.
 
 ## Project Structure
 
 ```
-├── main.py                     # CLI entry point
+├── main.py                      # CLI entry point
 ├── src/
-│   ├── informatica_parser.py   # XML parser
-│   ├── spark_detector.py       # Spark/Scala detector
+│   ├── informatica_parser.py    # XML parser
+│   ├── spark_detector.py        # Spark/Scala detector
 │   ├── expression_translator.py # Expression translation (regex + LLM)
-│   ├── datatype_mapper.py      # Datatype mapping
-│   ├── nifi_flow_generator.py  # NiFi flow JSON generator
-│   ├── nifi_direct_deployer.py # REST API deployer
-│   ├── langgraph_pipeline.py   # LangGraph orchestration
-│   ├── mcp_server.py           # MCP server
-│   ├── confidence_engine.py    # Translation confidence scoring
-│   ├── validation_engine.py    # Flow validation
-│   └── rule_memory_engine.py   # Learned rules storage
-├── input_data/                 # Informatica XML files
-├── output_data/                # Generated NiFi flows
-├── review_queue/               # Items for human review
-├── nifi-docker/                # NiFi Docker setup
-└── pg_docker/                  # PostgreSQL Docker setup
+│   ├── datatype_mapper.py       # Datatype mapping
+│   ├── nifi_flow_generator.py   # NiFi flow JSON generator
+│   ├── nifi_direct_deployer.py  # REST API deployer
+│   ├── langgraph_pipeline.py    # LangGraph orchestration
+│   ├── apply_review.py          # Human review re-apply + rule learning
+│   ├── mcp_server.py            # MCP server
+│   ├── confidence_engine.py     # Translation confidence scoring
+│   ├── validation_engine.py     # Flow validation
+│   └── rule_memory_engine.py    # Learned rules storage (PostgreSQL)
+├── input_data/                  # Informatica XML files
+├── output_data/                 # Generated NiFi flows
+├── review_queue/                # Human review packets (low-confidence translations)
+├── nifi-docker/                 # NiFi Docker setup
+└── pg_docker/                   # PostgreSQL Docker setup
 ```
