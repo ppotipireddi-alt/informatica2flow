@@ -1,7 +1,7 @@
 """
 main.py
 -------
-CLI entry point for the Informatica → NiFi Agentic Migration System.
+CLI entry point for the Informatica to NiFi Agentic Migration System.
 
 Usage:
   # Start the MCP server (agent tool interface)
@@ -15,6 +15,11 @@ Usage:
 
   # Batch migrate all XML files in a directory
   python main.py --mode batch --dir input_data/
+
+  # Re-apply human-reviewed corrections and regenerate the NiFi flow
+  python main.py --mode apply-review \
+    --review review_queue/M_POL_WKD_FILE_COSTCENTER_review.json \
+    --xml input_data/WF_POL_WKD_FILE_COSTCENTER_LOW.xml
 
   # Translate a single expression (quick test)
   python main.py --mode translate --expr "IIF(AMT > 0, AMT, 0)"
@@ -39,13 +44,14 @@ def main():
     )
     parser.add_argument(
         "--mode",
-        choices=["mcp-server", "migrate", "batch", "translate", "detect-spark"],
+        choices=["mcp-server", "migrate", "batch", "translate", "detect-spark", "apply-review"],
         required=True,
         help="Operation mode",
     )
-    parser.add_argument("--xml",  type=str, help="Path to Informatica XML file")
-    parser.add_argument("--dir",  type=str, help="Directory with XML files (batch mode)")
-    parser.add_argument("--expr", type=str, help="Informatica expression to translate")
+    parser.add_argument("--xml",    type=str, help="Path to Informatica XML file")
+    parser.add_argument("--dir",    type=str, help="Directory with XML files (batch mode)")
+    parser.add_argument("--expr",   type=str, help="Informatica expression to translate")
+    parser.add_argument("--review", type=str, help="Path to human-edited review JSON (apply-review mode)")
     parser.add_argument("--no-deploy", action="store_true", help="Skip NiFi deployment (export JSON only)")
     parser.add_argument("--output-dir", type=str, default="output_data", help="Output directory for flow JSON")
 
@@ -112,6 +118,25 @@ def main():
         print(f"\nOriginal:   {args.expr!r}")
         print(f"Translated: {translated!r}")
         print(f"Method:     {method} | Confidence: {confidence:.2%}")
+
+    # ── Apply Human Review ────────────────────────────────────────────────────
+    elif args.mode == "apply-review":
+        if not args.review:
+            parser.error("--review is required for apply-review mode")
+        if not args.xml:
+            parser.error("--xml is required for apply-review mode")
+        review_path = os.path.abspath(args.review)
+        xml_path    = os.path.abspath(args.xml)
+        if not os.path.exists(review_path):
+            print(f"❌ Review file not found: {review_path}")
+            sys.exit(1)
+        if not os.path.exists(xml_path):
+            print(f"❌ XML file not found: {xml_path}")
+            sys.exit(1)
+
+        print(f"📝 Applying human review: {review_path}")
+        from apply_review import apply_review
+        apply_review(review_path, xml_path, deploy=not args.no_deploy)
 
     # ── Spark Detection ───────────────────────────────────────────────────────
     elif args.mode == "detect-spark":
